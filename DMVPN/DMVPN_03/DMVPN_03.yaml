@@ -186,44 +186,6 @@ annotations:
     z_index: 1
   - border_color: '#00000000'
     border_style: ''
-    color: '#808080FF'
-    rotation: 0
-    text_bold: false
-    text_content: ''
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 400.0
-    y1: -400.0
-    z_index: 5
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      topology - DONE
-      vrf (front door) - DONE
-      ip addres + dhcp - DONE
-      ISP conectivity (UNDERLAY) - DONE
-      ipsec - DONE
-      dmvpn hub - DONE
-      dmvpn spoke - DONE
-      hub-spoke conectivity (OVERLAY, summarization) - DONE
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 360.0
-    y1: -640.0
-    z_index: 6
-  - border_color: '#00000000'
-    border_style: ''
     color: '#000000'
     rotation: 314
     text_bold: false
@@ -363,238 +325,21 @@ annotations:
     rotation: 0
     text_bold: false
     text_content: |-
-      vrf definition FDOOR-DMVPN
-       !
-       address-family ipv4
-       exit-address-family
-
-      ! int g0/0
-      !  vrf forwarding FDOOR-DMVPN
-      ! ip add ...
+      Implement IPv6overIPv4 DMVPN Phase 3 with IPSec (IKEv2):
+      1) Implement IPSec profile with pre-sheard key DMVPN-PRE-SHARED-KEY and transform-set ESP-AES256 ESP-SHA512-HMAC
+      2) Implement FVRF (Front Door) for DMVPN
+      3) Implement Tunnel100 on HQ, NHS (HUB) and BR1-BR3 (Spoke NHS has heighter priority)
+      4) Enabel EIGRP in named mode as overlay to connect all sites
+      5) Test connectivity between sites
     text_font: monospace
     text_italic: false
     text_size: 12
     text_unit: pt
     thickness: 1
     type: text
-    x1: 346.0
-    y1: -422.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      ! Set up show comends
-      en
-      sh ip int br
-      sh ipv6 int br
-      sh dhcp lease
-      sh ip route vrf FDOOR-DMVPN | beg Gat
-      sh ip route | beg Gat
-      sh ip ospf neig
-      conf t
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 346.0
-    y1: -182.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      crypto ikev2 keyring IKEV2-KEYRING-DMVPN
-       peer ANY-IPv4
-        address 0.0.0.0 0.0.0.0
-        pre-shared-key DMVPN-PRE-SHARED-KEY
-
-      crypto ikev2 profile IKEV2-PROFILE-DMVPN
-       ! MUST be match fvrf when we use VRF
-       match fvrf FDOOR-DMVPN
-       match identity remote address 0.0.0.0
-       authentication remote pre-share
-       authentication local pre-share
-       keyring local IKEV2-KEYRING-DMVPN
-       lifetime 300
-
-      crypto ipsec transform-set IPSEC-TRANSFORM-SET-DMVPN esp-aes 256 esp-sha512-hmac
-       mode transport
-
-      crypto ipsec profile IPSCE-PROFILE-DMVPN
-       set transform-set IPSEC-TRANSFORM-SET-DMVPN
-       set ikev2-profile IKEV2-PROFILE-DMVPN
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 706.0
-    y1: -422.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      ! HUB
-      interface Tunnel100
-       bandwidth 1000000
-       no ip address
-       no ip redirects
-       delay 50
-       ipv6 address FE80:100::1001 link-local
-       ipv6 address 6000::6666:1001/112
-       ipv6 mtu 1380
-       ipv6 tcp adjust-mss 1360
-       ipv6 nhrp authentication NHRP-PAS
-       ipv6 nhrp network-id 100
-       ipv6 nhrp redirect
-       ipv6 nhrp map multicast dynamic
-       ipv6 nhrp holdtime 600
-       ! For NHS only
-       ! ipv6 nhrp server-only
-       tunnel source GigabitEthernet0/4
-       tunnel mode gre multipoint
-       tunnel key 1500
-       tunnel vrf FDOOR-DMVPN
-       tunnel protection ipsec profile IPSCE-PROFILE-DMVPN
-      end
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 1426.0
-    y1: -422.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      ! SPOKE
-      interface Tunnel100
-       bandwidth 1000000
-       no ip address
-       no ip redirects
-       delay 50
-       ipv6 address FE80:100::1 link-local
-       ipv6 address 6000::6666:1/112
-       ipv6 mtu 1380
-       ipv6 tcp adjust-mss 1360
-       ipv6 nhrp authentication NHRP-PAS
-       ipv6 nhrp network-id 100
-       ipv6 nhrp nhs 6000::6666:1002 nbma 100.12.20.2 multicast priority 200
-       ipv6 nhrp nhs 6000::6666:1001 nbma 100.12.20.6 multicast priority 50
-       ipv6 nhrp shortcut
-       ipv6 nhrp holdtime 600
-       if-state nhrp
-       tunnel source GigabitEthernet0/1
-       tunnel mode gre multipoint
-       tunnel key 1500
-       tunnel vrf FDOOR-DMVPN
-       tunnel protection ipsec profile IPSCE-PROFILE-DMVPN
-      end
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 1946.0
-    y1: -422.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      router eigrp DMVPN-OVERLAY
-       !
-       address-family ipv6 unicast autonomous-system 200
-        !
-        af-interface default
-         shutdown
-        exit-af-interface
-        !
-        af-interface Tunnel100
-         no shutdown
-         no split-horizon
-        summary-address 2001:db8::10:0:0/96
-        exit-af-interface
-        !
-        af-interface GigabitEthernet0/1
-         no shutdown
-         passive-interface
-        exit-af-interface
-        !
-        topology base
-        exit-af-topology
-        eigrp router-id 0.1.0.2
-       exit-address-family
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 2626.0
-    y1: -422.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      no tunnel protection ipsec profile IPSCE-PROFILE-DMVPN
-      no crypto ipsec profile IPSCE-PROFILE-DMVPN
-      no crypto ipsec transform-set IPSEC-TRANSFORM-SET-DMVPN esp-aes 256 esp-sha512-hmac
-      no crypto ikev2 profile IKEV2-PROFILE-DMVPN
-      no crypto ikev2 keyring IKEV2-KEYRING-DMVPN
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 866.0
-    y1: -622.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      do sh dmvpn | beg Int
-      do sh dmvpn det | beg Int
-      do sh ipv6 nhrp br | beg Int
-      do sh ipv6 nhrp det | beg Int
-      do sh eigrp add ipv6 200 nei
-      do sh ipv6 route | beg Gat
-      do sh ipv6 route next-hop-override | beg Gat
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 1626.0
-    y1: -622.0
-    z_index: 1
+    x1: 360.0
+    y1: -400.0
+    z_index: 5
 nodes:
   - boot_disk_size: null
     configuration:
@@ -713,7 +458,7 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
-        content: |
+        content: |-
           hostname BR2
           ipv6 unicast-routing
 
@@ -767,7 +512,7 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
-        content: |
+        content: |-
           hostname ISP1
 
           int g0/0
@@ -1165,21 +910,21 @@ links:
     i1: i1
     i2: i1
     conditioning: {}
-    label: HQ-GigabitEthernet0/0<->ISP-GigabitEthernet0/0
+    label: HQ-GigabitEthernet0/0<->ISP1-GigabitEthernet0/0
   - id: l1
     n1: n3
     n2: n1
     i1: i2
     i2: i2
     conditioning: {}
-    label: ISP-GigabitEthernet0/1<->BR1-GigabitEthernet0/1
+    label: ISP1-GigabitEthernet0/1<->BR1-GigabitEthernet0/1
   - id: l2
     n1: n3
     n2: n2
     i1: i3
     i2: i3
     conditioning: {}
-    label: ISP-GigabitEthernet0/2<->BR2-GigabitEthernet0/2
+    label: ISP1-GigabitEthernet0/2<->BR2-GigabitEthernet0/2
   - id: l3
     n1: n3
     n2: n0
@@ -1188,7 +933,7 @@ links:
     conditioning:
       latency: 500
       enabled: true
-    label: ISP-GigabitEthernet0/3<->BR3-GigabitEthernet0/3
+    label: ISP1-GigabitEthernet0/3<->BR3-GigabitEthernet0/3
   - id: l4
     n1: n4
     n2: n6
@@ -1216,21 +961,21 @@ links:
     i1: i4
     i2: i4
     conditioning: {}
-    label: ISP2-GigabitEthernet0/3<->HQ-GigabitEthernet0/3
+    label: ISP2-1-GigabitEthernet0/3<->HQ-GigabitEthernet0/3
   - id: l8
     n1: n8
     n2: n9
     i1: i1
     i2: i1
     conditioning: {}
-    label: ISP2-GigabitEthernet0/0<->BNHS-GigabitEthernet0/0
+    label: ISP2-1-GigabitEthernet0/0<->NHS-GigabitEthernet0/0
   - id: l9
     n1: n3
     n2: n9
     i1: i5
     i2: i5
     conditioning: {}
-    label: ISP1-GigabitEthernet0/4<->BNHS-GigabitEthernet0/4
+    label: ISP1-GigabitEthernet0/4<->NHS-GigabitEthernet0/4
   - id: l10
     n1: n8
     n2: n10
@@ -1239,14 +984,14 @@ links:
     conditioning:
       loss: 100
       enabled: true
-    label: ISP2-GigabitEthernet0/1<->ISP2_0-GigabitEthernet0/1
+    label: ISP2-1-GigabitEthernet0/1<->ISP2-0-GigabitEthernet0/1
   - id: l11
     n1: n10
     n2: n1
     i1: i3
     i2: i3
     conditioning: {}
-    label: ISP2_0-GigabitEthernet0/2<->BR1-GigabitEthernet0/2
+    label: ISP2-0-GigabitEthernet0/2<->BR1-GigabitEthernet0/2
 lab:
   description: |-
     IPv6overIPv4 DMVPN Phase 3
