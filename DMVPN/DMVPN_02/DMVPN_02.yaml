@@ -275,229 +275,20 @@ annotations:
     rotation: 0
     text_bold: false
     text_content: |-
-      router eigrp OVERLAY-EIGRP
-       !
-       address-family ipv4 unicast autonomous-system 160
-        !
-        topology base
-        exit-af-topology
-        ! af-interface tunel 30
-        !  no split-horizon
-        ! exit-af-interface
-        network 10.0.0.0
-        ! 192.168.ISP.0/24
-        network 192.168.3.0
-        eigrp router-id 0.1.0.0
-       exit-address-family
+      Implement Hierarchical IPv4overIPv4 DMVPN Phase 3 with IPSec (IKEv2):
+      1) Implement IPSec profile with pre-sheard key DMVPNMHQ and transform-set ESP-AES256 ESP-SHA512-HMAC
+      2) Implement Tunnel30 on MHQ (HUB) and HQ1-HQ2 (Spoke)
+      3) Implement Tunnel10 on HQ1 (HUB) and BR1-BR3 (Spoke)
+      4) Implement Tunnel20 on HQ2 (HUB) and BR4-BR5 (Spoke)
+      3) Enabel EIGRP in named mode as overlay to connect all sites
+      4) Test connectivity between sites
     text_font: monospace
     text_italic: false
     text_size: 12
     text_unit: pt
     thickness: 1
     type: text
-    x1: 560.0
-    y1: -320.0
-    z_index: 2
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      ! Spoke-BR
-      interface Tunnel20
-       bandwidth 10000000
-       ip address 192.168.2.5 255.255.255.0
-       no ip redirects
-       ip mtu 1400
-       ip nhrp authentication HDMVPN
-       ip nhrp network-id 123000
-       ip nhrp nhs 192.168.2.254 nbma 140.0.67.23 multicast
-       ip nhrp shortcut
-       ! no-unique because G0/0 IP address comes form DHCP
-       ! ip nhrp registration no-unique
-       ip tcp adjust-mss 1360
-       delay 20
-       tunnel source GigabitEthernet0/1
-       tunnel mode gre multipoint
-       tunnel key 10
-       tunnel protection ipsec profile FOR-DMVPN-IPSEC-PROFILE
-      end
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 1040.0
-    y1: -320.0
-    z_index: 2
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      ! Hub-HQ
-      interface Tunnel20
-       bandwidth 10000000
-       ip address 192.168.2.254 255.255.255.0
-       no ip redirects
-       ip mtu 1400
-       ip nhrp authentication HDMVPN
-       ip nhrp network-id 123000
-       ip nhrp redirect
-       ip nhrp map multicast dynamic
-       ip tcp adjust-mss 1360
-       delay 20
-       tunnel source GigabitEthernet0/2
-       tunnel mode gre multipoint
-       tunnel key 10
-       tunnel protection ipsec profile FOR-DMVPN-IPSEC-PROFILE
-
-      interface Tunnel30
-       bandwidth 10000000
-       ip address 192.168.3.2 255.255.255.0
-       no ip redirects
-       ip mtu 1400
-       ip nhrp authentication HDMVPN
-       ip nhrp network-id 123000
-       ip nhrp nhs 192.168.3.254 nbma 204.34.6.12 multicast
-       ip nhrp redirect
-       ip nhrp shortcut
-       ! no-unique because G0/0 IP address comes form DHCP
-       ip nhrp registration no-unique
-       ip tcp adjust-mss 1360
-       delay 20
-       tunnel source GigabitEthernet0/0
-       tunnel mode gre multipoint
-       tunnel key 10
-       tunnel protection ipsec profile FOR-DMVPN-IPSEC-PROFILE
-      end
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 1560.0
-    y1: -320.0
-    z_index: 2
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      ! Hub-MHQ
-      interface Tunnel30
-       bandwidth 10000000
-       ip address 192.168.3.254 255.255.255.0
-       no ip redirects
-       ip mtu 1400
-       ip nhrp authentication HDMVPN
-       ip nhrp network-id 123000
-       ip nhrp map multicast dynamic
-       ip nhrp redirect
-       ip nhrp shortcut
-       ip tcp adjust-mss 1360
-       delay 20
-       tunnel source GigabitEthernet0/2
-       tunnel mode gre multipoint
-       tunnel key 10
-       tunnel protection ipsec profile FOR-DMVPN-IPSEC-PROFILE
-      end
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 1040.0
-    y1: 160.0
-    z_index: 2
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      do sh dmvpn | beg Int
-      do sh dmvpn det | beg Int
-      do sh ip nhrp br | beg Int
-      do sh ip nhrp det | beg Int
-      do sh eigrp add ipv4 160 nei
-      do sh ip route | beg Gat
-      do sh ip route next-hop-override | beg Gat
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 560.0
-    y1: 80.0
-    z_index: 2
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      Hello EIGRP was not sent by spoke HQ1 and HQ2:
-      *Mar 20 16:26:43.297: %DUAL-5-NBRCHANGE: EIGRP-IPv4 160: Neighbor 192.168.3.254 (Tunnel30) is down: retry limit exceeded
-      *Mar 20 16:26:46.858: %DUAL-5-NBRCHANGE: EIGRP-IPv4 160: Neighbor 192.168.3.254 (Tunnel30) is up: new adjacency
-      *Mar 20 16:28:06.380: %DUAL-5-NBRCHANGE: EIGRP-IPv4 160: Neighbor 192.168.3.254 (Tunnel30) is down: retry limit exceeded
-      *Mar 20 16:28:10.244: %DUAL-5-NBRCHANGE: EIGRP-IPv4 160: Neighbor 192.168.3.254 (Tunnel30) is up: new adjacency
-
-      Case by:
-      ip nhrp nhs 192.168.3.254 nbma 204.34.6.12
-      Correct:
-      ip nhrp nhs 192.168.3.254 nbma 204.34.6.12 multicast
-      Now Sopke can send a multicast and broadcast packets
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: -320.0
-    y1: 280.0
-    z_index: 3
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      crypto ikev2 keyring FOR-DMVPN-IKEV2
-       ! ANY because address use physical ip address (nbma address), not tunel address
-       peer ANY
-        address 0.0.0.0 0.0.0.0
-        pre-shared-key DMVPNHQ1
-
-      crypto ikev2 profile FOR-DMVPN-IKEV2-PROFILE
-       ! ANY because match identity remote address use physical ip address (nbma address), not tunel address
-       match identity remote any
-       authentication remote pre-share
-       authentication local pre-share
-       keyring local FOR-DMVPN-IKEV2
-
-      crypto ipsec transform-set FOR-DMVPN-TRANSFORM esp-aes 256 esp-sha512-hmac
-       ! DMVPN must use transport mode
-       mode transport
-
-      crypto ipsec profile FOR-DMVPN-IPSEC-PROFILE
-       set transform-set FOR-DMVPN-TRANSFORM
-       set ikev2-profile FOR-DMVPN-IKEV2-PROFILE
-      end
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 2120.0
+    x1: 520.0
     y1: -320.0
     z_index: 2
 nodes:
@@ -1341,21 +1132,21 @@ links:
     i1: i1
     i2: i1
     conditioning: {}
-    label: HQ-GigabitEthernet0/0<->ISP-GigabitEthernet0/0
+    label: HQ1-GigabitEthernet0/0<->ISP1-GigabitEthernet0/0
   - id: l1
     n1: n3
     n2: n1
     i1: i2
     i2: i2
     conditioning: {}
-    label: ISP-GigabitEthernet0/1<->BR1-GigabitEthernet0/1
+    label: ISP1-GigabitEthernet0/1<->BR1-GigabitEthernet0/1
   - id: l2
     n1: n3
     n2: n2
     i1: i3
     i2: i3
     conditioning: {}
-    label: ISP-GigabitEthernet0/2<->BR2-GigabitEthernet0/2
+    label: ISP1-GigabitEthernet0/2<->BR2-GigabitEthernet0/2
   - id: l3
     n1: n3
     n2: n0
@@ -1364,7 +1155,7 @@ links:
     conditioning:
       latency: 500
       enabled: true
-    label: ISP-GigabitEthernet0/3<->BR3-GigabitEthernet0/3
+    label: ISP1-GigabitEthernet0/3<->BR3-GigabitEthernet0/3
   - id: l4
     n1: n1
     n2: n5
@@ -1392,7 +1183,7 @@ links:
     i1: i0
     i2: i2
     conditioning: {}
-    label: PC1_0-eth0<->BR4-GigabitEthernet0/1
+    label: PC3-eth0<->BR4-GigabitEthernet0/1
   - id: l8
     n1: n7
     n2: n10
@@ -1413,7 +1204,7 @@ links:
     i1: i3
     i2: i3
     conditioning: {}
-    label: HQ1_0-GigabitEthernet0/2<->ISP2-GigabitEthernet0/2
+    label: HQ2-GigabitEthernet0/2<->ISP2-GigabitEthernet0/2
   - id: l11
     n1: n4
     n2: n13
@@ -1441,7 +1232,7 @@ links:
     i1: i1
     i2: i0
     conditioning: {}
-    label: MHQ-GigabitEthernet0/0<->PC3_0-eth0
+    label: MHQ-GigabitEthernet0/0<->PC5-eth0
   - id: l15
     n1: n16
     n2: n4
