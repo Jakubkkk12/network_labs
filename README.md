@@ -1,5 +1,5 @@
-# MPLS_labs
+# network_labs
 Labs made with Cisco CML
 
-1) MPLS Traffic Engineering
-2) MPLS L3 VPN
+1) MPLS
+2) DMVPN
