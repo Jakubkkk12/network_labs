@@ -1,4 +1,4 @@
-# 📡 MPLS-TE + FRR Lab (Cisco CML)
+# 📡 MPLS-TE + FRR Lab
 
 ## 📘 Project Overview
 
