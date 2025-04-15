@@ -125,52 +125,11 @@ annotations:
     rotation: 0
     text_bold: false
     text_content: |-
-      interface Tunnel100
-       ip address 10.0.0.3 255.255.255.0
-       no ip redirects
-       ip mtu 1400
-       ip nhrp authentication PASS123
-       ip nhrp map 10.0.0.254 100.0.20.20
-       ip nhrp map multicast 100.0.20.20
-       ip nhrp network-id 100
-       ip nhrp nhs 10.0.0.254
-       ip tcp adjust-mss 1360
-       tunnel source GigabitEthernet0/3
-       tunnel mode gre multipoint
-       tunnel key 100
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: -620.0
-    y1: -64.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      router eigrp OVERLAY-EIGRP
-       !
-       address-family ipv4 unicast autonomous-system 100
-        ! FOR HQ:
-        af-interface Tunnel100
-         no next-hop-self
-         no split-horizon
-        exit-af-interface
-        !
-        af-interface GigabitEthernet0/1
-         passive-interface
-        exit-af-interface
-        topology base
-        exit-af-topology
-        network 10.0.0.0 0.0.0.255
-        network 10.100.0.0 0.0.0.255
-        eigrp router-id 10.0.0.254
-       exit-address-family
+      Implement IPv4overIPv4 DMVPN Phase 2:
+      1) Create Tunnel100 as DMVPN HUB (NHRP server) on HQ
+      2) Create Tunnel100 as DMVPN Spoke on BR1-BR3
+      3) Enabel EIGRP in named mode as overlay to connect sites
+      4) Test connectivity between sites
     text_font: monospace
     text_italic: false
     text_size: 12
@@ -178,34 +137,7 @@ annotations:
     thickness: 1
     type: text
     x1: 228.0
-    y1: -282.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      interface Tunnel100
-       ip address 10.0.0.254 255.255.255.0
-       no ip redirects
-       ip mtu 1400
-       no ip next-hop-self eigrp 100
-       no ip split-horizon eigrp 100
-       ip nhrp authentication PASS123
-       ip nhrp network-id 100
-       ip tcp adjust-mss 1360
-       tunnel source GigabitEthernet0/0
-       tunnel mode gre multipoint
-       tunnel key 100
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: -948.0
-    y1: -66.0
+    y1: -202.0
     z_index: 1
 nodes:
   - boot_disk_size: null
@@ -352,7 +284,7 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
-        content: |+
+        content: |
           hostname ISP
 
           int g0/0
@@ -370,7 +302,6 @@ nodes:
           int g0/3
           ip add 173.45.21.15 255.255.255.0
           no sh
-
     cpu_limit: null
     cpus: null
     data_volume: null
