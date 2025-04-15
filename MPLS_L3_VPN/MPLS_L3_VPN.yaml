@@ -1,0 +1,2915 @@
+annotations:
+  - border_color: '#B2FFE1'
+    border_style: ''
+    color: '#B2FFE1'
+    thickness: 5
+    type: ellipse
+    x1: -120.0
+    y1: 120.0
+    x2: 240.0
+    y2: 200.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: CORE
+    text_font: monospace
+    text_italic: false
+    text_size: 26
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -143.26424965054548
+    y1: -66.2463336108697
+    z_index: 1
+  - border_color: '#DDD894'
+    border_style: ''
+    color: '#DDD894'
+    thickness: 15
+    type: ellipse
+    x1: -600.0
+    y1: 80.0
+    x2: 40.0
+    y2: 40.0
+    z_index: 2
+  - border_color: '#DDD894'
+    border_style: ''
+    color: '#DDD894'
+    thickness: 15
+    type: ellipse
+    x1: 0.0
+    y1: 520.0
+    x2: 40.0
+    y2: 40.0
+    z_index: 2
+  - border_color: '#DDD894'
+    border_style: ''
+    color: '#DDD894'
+    thickness: 15
+    type: ellipse
+    x1: 401.3048808152753
+    y1: -37.755615777754734
+    x2: 40.0
+    y2: 40.0
+    z_index: 2
+  - border_color: '#85EC8B'
+    border_style: ''
+    color: '#85EC8B'
+    thickness: 15
+    type: ellipse
+    x1: -520.0
+    y1: -200.0
+    x2: 40.0
+    y2: 40.0
+    z_index: 2
+  - border_color: '#85EC8B'
+    border_style: ''
+    color: '#85EC8B'
+    thickness: 15
+    type: ellipse
+    x1: 198.8298832152973
+    y1: -273.28275704168334
+    x2: 40.0
+    y2: 40.0
+    z_index: 2
+  - border_color: '#EC85DE'
+    border_style: ''
+    color: '#EC85DE'
+    thickness: 15
+    type: ellipse
+    x1: 0.0
+    y1: -320.0
+    x2: 40.0
+    y2: 40.0
+    z_index: 2
+  - border_color: '#EC85DE'
+    border_style: ''
+    color: '#EC85DE'
+    thickness: 15
+    type: ellipse
+    x1: 200.0
+    y1: 520.0
+    x2: 40.0
+    y2: 40.0
+    z_index: 2
+  - border_color: '#EC85DE'
+    border_style: ''
+    color: '#EC85DE'
+    thickness: 15
+    type: ellipse
+    x1: 440.0
+    y1: 160.0
+    x2: 40.0
+    y2: 40.0
+    z_index: 2
+  - border_color: '#EC85DE'
+    border_style: ''
+    color: '#EC85DE'
+    thickness: 15
+    type: ellipse
+    x1: -640.0
+    y1: -80.0
+    x2: 40.0
+    y2: 40.0
+    z_index: 2
+  - border_color: '#B2D6FF'
+    border_style: ''
+    color: '#B2D6FF'
+    thickness: 5
+    type: ellipse
+    x1: -100.0
+    y1: 120.0
+    x2: 340.0
+    y2: 280.0
+    z_index: -1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: MPLS
+    text_font: monospace
+    text_italic: false
+    text_size: 26
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -142.94289560720165
+    y1: -118.53164399362839
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: ''
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 101.4786911462578
+    y1: 38.9584926215785
+    z_index: 3
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 172.16.150.0/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -326.28866492758465
+    y1: -14.279849174368223
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 14
+    text_bold: false
+    text_content: 172.16.150.4/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -157.91231633823463
+    y1: -5.977713023590468
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 305
+    text_bold: false
+    text_content: 172.16.150.8/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -45.79967608125389
+    y1: 12.62622887818452
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 10
+    text_bold: false
+    text_content: 172.16.150.12/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 44.91690607750178
+    y1: 34.3999571648817
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 323
+    text_bold: false
+    text_content: 172.16.150.16/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 72.23776053781285
+    y1: 157.60684976909016
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 64
+    text_bold: false
+    text_content: 172.16.150.20/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 2.8801302579960293
+    y1: 69.23050117973997
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 172.16.150.24/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -85.49621833135416
+    y1: 182.1355880329512
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 172.16.150.28/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -245.49621833135413
+    y1: 182.1355880329512
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 67
+    text_bold: false
+    text_content: 172.16.150.32/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -314.182828213321
+    y1: 57.4823350650081
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 291
+    text_bold: false
+    text_content: 172.16.150.36/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -271.98004706680865
+    y1: 142.27221837742337
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 67
+    text_bold: false
+    text_content: 172.16.150.40/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -160.02252961407598
+    y1: 25.140496592884574
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 327
+    text_bold: false
+    text_content: 172.16.150.44/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -248.51809649395577
+    y1: 162.06286703942249
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 31
+    text_bold: false
+    text_content: 172.16.150.48/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -63.13911974820212
+    y1: 238.67150291415737
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 69
+    text_bold: false
+    text_content: 172.16.150.52/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 73.40827880681343
+    y1: 211.39248516040948
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 308
+    text_bold: false
+    text_content: 10.127.255.252/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 81.86686679599194
+    y1: -156.95694971837275
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 52
+    text_bold: false
+    text_content: 10.63.255.252/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -449.6329475198768
+    y1: -151.45639266597885
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: OSPF
+    text_font: monospace
+    text_italic: false
+    text_size: 14
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 164.1064331934018
+    y1: -217.90990554201468
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: OSPF
+    text_font: monospace
+    text_italic: false
+    text_size: 14
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -531.8816830221949
+    y1: -142.4521447347529
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      BGP
+      AS1768
+    text_font: monospace
+    text_italic: false
+    text_size: 14
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -594.4216940053575
+    y1: -50.702980313343716
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      BGP
+      AS5672
+    text_font: monospace
+    text_italic: false
+    text_size: 14
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 26.31892894601168
+    y1: -272.32375599935665
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      BGP
+      AS4512
+    text_font: monospace
+    text_italic: false
+    text_size: 14
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 328.8980224916803
+    y1: 143.33684498568755
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      BGP
+      AS8789
+    text_font: monospace
+    text_italic: false
+    text_size: 14
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 178.19276842019104
+    y1: 422.9163098996188
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      EIGRP
+      AS150
+    text_font: monospace
+    text_italic: false
+    text_size: 14
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -544.8385154088004
+    y1: 70.75403775739291
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      EIGRP
+      AS540
+    text_font: monospace
+    text_italic: false
+    text_size: 14
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 314.5232545968445
+    y1: 15.880569651476094
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      EIGRP
+      AS670
+    text_font: monospace
+    text_italic: false
+    text_size: 14
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 43.48297662042212
+    y1: 457.29889190521993
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 329
+    text_bold: false
+    text_content: 192.168.1.252/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 243.57323497226906
+    y1: 37.33222568619895
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 342
+    text_bold: false
+    text_content: 192.168.1.248/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -537.7051707526872
+    y1: 40.9161470192814
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 294
+    text_bold: false
+    text_content: 192.168.1.244/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 2.5367519876012334
+    y1: 467.11824446053856
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 259
+    text_bold: false
+    text_content: 10.255.0.0/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 7.827041496960646
+    y1: -152.4147105256346
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 16
+    text_bold: false
+    text_content: 10.255.0.0/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -534.8302171737201
+    y1: -70.2487247007827
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 18
+    text_bold: false
+    text_content: 10.255.0.0/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 283.3238848667286
+    y1: 86.66605417721576
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 60
+    text_bold: false
+    text_content: 10.255.0.0/30
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 132.82141177955975
+    y1: 354.83775659691287
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      10.0.0.0/14
+      10.4.0.0/14
+      10.8.0.0/14
+      172.16.4.0/22
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -636.0746837019243
+    y1: -229.19239984279105
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      10.64.0.0/14
+      10.68.0.0/14
+      10.72.0.0/14
+      172.16.8.0/22
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 249.16166851442517
+    y1: -304.1905430014779
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      10.0.0.0/14
+      10.4.0.0/14
+      10.8.0.0/14
+      10.12.0.0/14
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -717.9056148673433
+    y1: 52.48448089111645
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      10.16.0.0/14
+      10.20.0.0/14
+      10.24.0.0/14
+      10.28.0.0/14
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -125.18845615701356
+    y1: 491.1189774027187
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      172.16.0.0/20
+      192.168.128.0/17
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 455.1380019057814
+    y1: -51.609761012861895
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      10.0.0.0/14
+      10.4.0.0/14
+      10.8.0.0/14
+      10.12.0.0/14
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 497.291521868437
+    y1: 128.59226532225426
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      10.16.0.0/14
+      10.20.0.0/14
+      10.24.0.0/14
+      10.28.0.0/14
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: 255.01438402076897
+    y1: 488.95299157786667
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      172.16.0.0/20
+      172.16.16.0/20
+      192.168.0.0/17
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -136.11939570869916
+    y1: -343.99566996354633
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      172.16.32.0/20
+      192.168.128.0/17
+    text_font: monospace
+    text_italic: false
+    text_size: 8
+    text_unit: pt
+    thickness: 4
+    type: text
+    x1: -787.9252742179751
+    y1: -92.41242876998767
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: AS 57644
+    text_font: monospace
+    text_italic: false
+    text_size: 26
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -180.41470986430522
+    y1: 345.0351486775447
+    z_index: 1
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname P1
+          no ip domain lookup
+
+          int lo 0
+           ip add 10.0.0.1 255.255.255.255
+
+          key chain ISIS-BFD-KEY
+           key 111
+            key-string BFD
+            cryptographic-algorithm hmac-sha-1
+
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 500 min-rx 500 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+
+          access-list 10 permit 10.0.0.0 0.0.255.255
+          access-list 10 permit 10.1.0.0 0.0.255.255
+
+          mpls ldp router-id Loopback0 force
+          mpls ldp password required
+          mpls ldp password option 1 for 10 MPLS-LDP
+          mpls ldp loop-detection
+          mpls ldp session protection for 10
+          mpls ldp holdtime 90
+
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0001.0000.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           passive-interface Loopback0
+
+          int lo 0
+           ip router isis CORE
+           isis circuit-type level-2-only
+
+          int g0/0
+           ip add 172.16.150.37 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/1
+           ip add 172.16.150.33 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/3
+           ip add 172.16.150.45 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/4
+           ip add 172.16.150.29 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: P1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -280
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/4
+        slot: 4
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname P2
+          no ip domain lookup
+
+          int lo 0
+           ip add 10.0.0.2 255.255.255.255
+
+          key chain ISIS-BFD-KEY
+           key 111
+            key-string BFD
+            cryptographic-algorithm hmac-sha-1
+
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 500 min-rx 500 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+
+          access-list 10 permit 10.0.0.0 0.0.255.255
+          access-list 10 permit 10.1.0.0 0.0.255.255
+
+          mpls ldp router-id Loopback0 force
+          mpls ldp password required
+          mpls ldp password option 1 for 10 MPLS-LDP
+          mpls ldp loop-detection
+          mpls ldp session protection for 10
+          mpls ldp holdtime 90
+
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0002.0000.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           passive-interface Loopback0
+
+          int lo 0
+           ip router isis CORE
+           isis circuit-type level-2-only
+
+          int g0/0
+           ip add 172.16.150.38 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/1
+           ip add 172.16.150.5 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/2
+           ip add 172.16.150.41 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/3
+           ip add 172.16.150.1 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: P2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -200
+    y: 0
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname P3
+          no ip domain lookup
+
+          int lo 0
+           ip add 10.0.0.3 255.255.255.255
+
+          key chain ISIS-BFD-KEY
+           key 111
+            key-string BFD
+            cryptographic-algorithm hmac-sha-1
+
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 500 min-rx 500 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+
+          access-list 10 permit 10.0.0.0 0.0.255.255
+          access-list 10 permit 10.1.0.0 0.0.255.255
+
+          mpls ldp router-id Loopback0 force
+          mpls ldp password required
+          mpls ldp password option 1 for 10 MPLS-LDP
+          mpls ldp loop-detection
+          mpls ldp session protection for 10
+          mpls ldp holdtime 90
+
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0003.0000.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           passive-interface Loopback0
+
+          int lo 0
+           ip router isis CORE
+           isis circuit-type level-2-only
+
+          int g0/1
+           ip add 172.16.150.6 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/3
+           ip add 172.16.150.46 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/0
+           ip add 172.16.150.9 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/4
+           ip add 172.16.150.13 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/2
+           ip add 172.16.150.21 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: P3
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -40
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/4
+        slot: 4
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname P5
+          no ip domain lookup
+
+          int lo 0
+           ip add 10.0.0.5 255.255.255.255
+
+          key chain ISIS-BFD-KEY
+           key 111
+            key-string BFD
+            cryptographic-algorithm hmac-sha-1
+
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 500 min-rx 500 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+
+          access-list 10 permit 10.0.0.0 0.0.255.255
+          access-list 10 permit 10.1.0.0 0.0.255.255
+
+          mpls ldp router-id Loopback0 force
+          mpls ldp password required
+          mpls ldp password option 1 for 10 MPLS-LDP
+          mpls ldp loop-detection
+          mpls ldp session protection for 10
+          mpls ldp holdtime 90
+
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0005.0000.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           passive-interface Loopback0
+
+          int lo 0
+           ip router isis CORE
+           isis circuit-type level-2-only
+
+          int g0/4
+           ip add 172.16.150.30 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/2
+           ip add 172.16.150.42 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/1
+           ip add 172.16.150.49 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/0
+           ip add 172.16.150.25 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: P5
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -120
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/4
+        slot: 4
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname P4
+          no ip domain lookup
+
+          int lo 0
+           ip add 10.0.0.4 255.255.255.255
+
+          key chain ISIS-BFD-KEY
+           key 111
+            key-string BFD
+            cryptographic-algorithm hmac-sha-1
+
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 500 min-rx 500 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+
+          access-list 10 permit 10.0.0.0 0.0.255.255
+          access-list 10 permit 10.1.0.0 0.0.255.255
+
+          mpls ldp router-id Loopback0 force
+          mpls ldp password required
+          mpls ldp password option 1 for 10 MPLS-LDP
+          mpls ldp loop-detection
+          mpls ldp session protection for 10
+          mpls ldp holdtime 90
+
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0004.0000.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           passive-interface Loopback0
+
+          int lo 0
+           ip router isis CORE
+           isis circuit-type level-2-only
+
+          int g0/1
+           ip add 172.16.150.17 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/0
+           ip add 172.16.150.26 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/2
+           ip add 172.16.150.22 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/3
+           ip add 172.16.150.51 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: P4
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 40
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname PE1
+          no ip domain lookup
+
+          int lo 0
+           ip add 10.1.0.1 255.255.255.255
+
+          vrf definition C-A
+           rd 1000:100
+           address-family ipv4
+            route-target export 1000:100
+            route-target import 3000:100
+            route-target import 4000:100
+           exit-address-family
+
+          router eigrp C-A100
+           !
+           address-family ipv4 unicast vrf C-A autonomous-system 150
+            !
+            topology base
+             redistribute bgp 57644 metric 10000 10 255 1 1500
+            exit-af-topology
+            network 192.168.1.248 0.0.0.3
+            eigrp router-id 0.0.0.255
+           exit-address-family
+
+          vrf definition C-B
+           rd 1000:200
+           address-family ipv4
+            route-target export 1000:200
+            route-target import 2000:200
+           exit-address-family
+
+          router ospf 200 vrf C-B
+           router-id 0.0.0.255
+           network 10.63.255.252 0.0.0.3 area 0
+           redistribute bgp 57644 subnets
+
+          vrf definition C-C
+           rd 1000:300
+           address-family ipv4
+            route-target export 1000:300
+            route-target import 2000:300
+            route-target import 3000:300
+            route-target import 4000:300
+           exit-address-family
+
+          key chain ISIS-BFD-KEY
+           key 111
+            key-string BFD
+            cryptographic-algorithm hmac-sha-1
+
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 500 min-rx 500 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+
+          access-list 10 permit 10.0.0.0 0.0.255.255
+          access-list 10 permit 10.1.0.0 0.0.255.255
+
+          mpls ldp router-id Loopback0 force
+          mpls ldp password required
+          mpls ldp password option 1 for 10 MPLS-LDP
+          mpls ldp loop-detection
+          mpls ldp session protection for 10
+          mpls ldp holdtime 90
+
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0001.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           passive-interface Loopback0
+
+          router bgp 57644
+           template peer-policy PE-VPNv4-RR
+            route-reflector-client
+            send-community extended
+           exit-peer-policy
+           !
+           template peer-session PE
+            remote-as 57644
+            password PE-VPNv4
+            update-source Loopback0
+           exit-peer-session
+           !
+           bgp router-id 10.1.0.1
+           bgp log-neighbor-changes
+           neighbor 10.1.0.2 inherit peer-session PE
+           neighbor 10.1.0.3 inherit peer-session PE
+           neighbor 10.1.0.4 inherit peer-session PE
+           !
+           address-family vpnv4
+            neighbor 10.1.0.2 activate
+            neighbor 10.1.0.2 inherit peer-policy PE-VPNv4-RR
+            neighbor 10.1.0.3 activate
+            neighbor 10.1.0.3 inherit peer-policy PE-VPNv4-RR
+            neighbor 10.1.0.4 activate
+            neighbor 10.1.0.4 inherit peer-policy PE-VPNv4-RR
+           exit-address-family
+           !
+           address-family ipv4 vrf C-A
+            redistribute eigrp 150
+           exit-address-family
+           !
+           address-family ipv4 vrf C-B
+            redistribute ospf 200
+           exit-address-family
+           !
+           address-family ipv4 vrf C-C
+            neighbor 10.255.0.1 remote-as 1768
+            neighbor 10.255.0.1 activate
+           exit-address-family
+
+          int lo 0
+           ip router isis CORE
+           isis circuit-type level-2-only
+
+          int g0/1
+           ip add 172.16.150.34 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/3
+           ip add 172.16.150.2 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/0
+           vrf forw C-A
+           ip add 192.168.1.250 255.255.255.252
+           no sh
+
+          int g0/2
+           vrf forw C-B
+           ip add 10.63.255.254 255.255.255.252
+           no sh
+
+          int g0/4
+           vrf forw C-C
+           ip add 10.255.0.2 255.255.255.252
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: PE1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -360
+    y: 0
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/4
+        slot: 4
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname PE2
+          no ip domain lookup
+
+          int lo 0
+           ip add 10.1.0.2 255.255.255.255
+
+          vrf definition C-B
+           rd 2000:200
+           address-family ipv4
+            route-target export 2000:200
+            route-target import 1000:200
+           exit-address-family
+
+          router ospf 200 vrf C-B
+           router-id 0.0.0.255
+           network 10.127.255.252 0.0.0.3 area 0
+           redistribute bgp 57644 subnets
+
+          vrf definition C-C
+           rd 2000:300
+           address-family ipv4
+            route-target export 2000:300
+            route-target import 1000:300
+            route-target import 3000:300
+            route-target import 4000:300
+           exit-address-family
+
+          key chain ISIS-BFD-KEY
+           key 111
+            key-string BFD
+            cryptographic-algorithm hmac-sha-1
+
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 500 min-rx 500 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+
+          access-list 10 permit 10.0.0.0 0.0.255.255
+          access-list 10 permit 10.1.0.0 0.0.255.255
+
+          mpls ldp router-id Loopback0 force
+          mpls ldp password required
+          mpls ldp password option 1 for 10 MPLS-LDP
+          mpls ldp loop-detection
+          mpls ldp session protection for 10
+          mpls ldp holdtime 90
+
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0002.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           passive-interface Loopback0
+
+          router bgp 57644
+           template peer-session PE
+            remote-as 57644
+            password PE-VPNv4
+            update-source Loopback0
+           exit-peer-session
+           !
+           bgp router-id 10.1.0.2
+           bgp log-neighbor-changes
+           neighbor 10.1.0.1 inherit peer-session PE
+           neighbor 10.1.0.3 inherit peer-session PE
+           neighbor 10.1.0.4 inherit peer-session PE
+           !
+           address-family vpnv4
+            neighbor 10.1.0.1 activate
+            neighbor 10.1.0.3 activate
+            neighbor 10.1.0.4 activate
+           exit-address-family
+           !
+           address-family ipv4 vrf C-B
+            redistribute ospf 200
+           exit-address-family
+           !
+           address-family ipv4 vrf C-C
+            neighbor 10.255.0.1 remote-as 5672
+            neighbor 10.255.0.1 activate
+           exit-address-family
+
+          int lo 0
+           ip router isis CORE
+           isis circuit-type level-2-only
+
+          int g0/0
+           ip add 172.16.150.10 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/1
+           vrf forw C-C
+           ip add 10.255.0.2 255.255.255.252
+           no sh
+
+          int g0/2
+           vrf forw C-B
+           ip add 10.127.255.254 255.255.255.252
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: PE2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 40
+    y: -80
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname PE4
+          no ip domain lookup
+
+          int lo 0
+           ip add 10.1.0.4 255.255.255.255
+
+          vrf definition C-A
+           rd 4000:100
+           address-family ipv4
+            route-target export 4000:100
+            route-target import 1000:100
+            route-target import 3000:100
+           exit-address-family
+
+          router eigrp C-A100
+           !
+           address-family ipv4 unicast vrf C-A autonomous-system 670
+            !
+            topology base
+             redistribute bgp 57644 metric 10000 10 255 1 1500
+            exit-af-topology
+            network 192.168.1.244 0.0.0.3
+            eigrp router-id 0.0.0.255
+           exit-address-family
+
+          vrf definition C-C
+           rd 4000:300
+           address-family ipv4
+            route-target export 4000:300
+            route-target import 1000:300
+            route-target import 2000:300
+            route-target import 3000:300
+           exit-address-family
+
+          key chain ISIS-BFD-KEY
+           key 111
+            key-string BFD
+            cryptographic-algorithm hmac-sha-1
+
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 500 min-rx 500 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+
+          access-list 10 permit 10.0.0.0 0.0.255.255
+          access-list 10 permit 10.1.0.0 0.0.255.255
+
+          mpls ldp router-id Loopback0 force
+          mpls ldp password required
+          mpls ldp password option 1 for 10 MPLS-LDP
+          mpls ldp loop-detection
+          mpls ldp session protection for 10
+          mpls ldp holdtime 90
+
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0004.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           passive-interface Loopback0
+
+          router bgp 57644
+           template peer-policy PE-VPNv4-RR
+            route-reflector-client
+            send-community extended
+           exit-peer-policy
+           !
+           template peer-session PE
+            remote-as 57644
+            password PE-VPNv4
+            update-source Loopback0
+           exit-peer-session
+           !
+           bgp router-id 10.1.0.4
+           bgp log-neighbor-changes
+           neighbor 10.1.0.1 inherit peer-session PE
+           neighbor 10.1.0.2 inherit peer-session PE
+           neighbor 10.1.0.3 inherit peer-session PE
+           !
+           address-family vpnv4
+            neighbor 10.1.0.1 activate
+            neighbor 10.1.0.1 inherit peer-policy PE-VPNv4-RR
+            neighbor 10.1.0.2 activate
+            neighbor 10.1.0.2 inherit peer-policy PE-VPNv4-RR
+            neighbor 10.1.0.3 activate
+            neighbor 10.1.0.3 inherit peer-policy PE-VPNv4-RR
+           exit-address-family
+           !
+           address-family ipv4 vrf C-A
+            redistribute eigrp 670
+           exit-address-family
+           !
+           address-family ipv4 vrf C-C
+            neighbor 10.255.0.1 remote-as 8789
+            neighbor 10.255.0.1 activate
+           exit-address-family
+
+          int lo 0
+           ip router isis CORE
+           isis circuit-type level-2-only
+
+          int g0/1
+           ip add 172.16.150.50 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/3
+           ip add 172.16.150.54 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/0
+           vrf forw C-A
+           ip add 192.168.1.246 255.255.255.252
+           no sh
+
+          int g0/2
+           vrf forw C-C
+           ip add 10.255.0.2 255.255.255.252
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: PE4
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 80
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname PE3
+          no ip domain lookup
+
+          int lo 0
+           ip add 10.1.0.3 255.255.255.255
+
+          vrf definition C-A
+           rd 3000:100
+           address-family ipv4
+            route-target export 3000:100
+            route-target import 1000:100
+            route-target import 4000:100
+           exit-address-family
+
+          router eigrp C-A100
+           !
+           address-family ipv4 unicast vrf C-A autonomous-system 540
+            !
+            topology base
+             redistribute bgp 57644 metric 10000 10 255 1 1500
+            exit-af-topology
+            network 192.168.1.252 0.0.0.3
+            eigrp router-id 0.0.0.255
+           exit-address-family
+
+          vrf definition C-C
+           rd 3000:300
+           address-family ipv4
+            route-target export 3000:300
+            route-target import 1000:300
+            route-target import 2000:300
+            route-target import 4000:300
+           exit-address-family
+
+          key chain ISIS-BFD-KEY
+           key 111
+            key-string BFD
+            cryptographic-algorithm hmac-sha-1
+
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 500 min-rx 500 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+
+          access-list 10 permit 10.0.0.0 0.0.255.255
+          access-list 10 permit 10.1.0.0 0.0.255.255
+
+          mpls ldp router-id Loopback0 force
+          mpls ldp password required
+          mpls ldp password option 1 for 10 MPLS-LDP
+          mpls ldp loop-detection
+          mpls ldp session protection for 10
+          mpls ldp holdtime 90
+
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0003.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           passive-interface Loopback0
+
+          router bgp 57644
+           template peer-session PE
+            remote-as 57644
+            password PE-VPNv4
+            update-source Loopback0
+           exit-peer-session
+           !
+           bgp router-id 10.1.0.3
+           bgp log-neighbor-changes
+           neighbor 10.1.0.1 inherit peer-session PE
+           neighbor 10.1.0.2 inherit peer-session PE
+           neighbor 10.1.0.4 inherit peer-session PE
+           !
+           address-family vpnv4
+            neighbor 10.1.0.1 activate
+            neighbor 10.1.0.2 activate
+            neighbor 10.1.0.4 activate
+           exit-address-family
+           !
+           address-family ipv4 vrf C-A
+            redistribute eigrp 540
+           exit-address-family
+           !
+           address-family ipv4 vrf C-C
+            neighbor 10.255.0.1 remote-as 4512
+            neighbor 10.255.0.1 activate
+           exit-address-family
+
+          int lo 0
+           ip router isis CORE
+           isis circuit-type level-2-only
+
+          int g0/1
+           ip add 172.16.150.18 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/4
+           ip add 172.16.150.14 255.255.255.252
+           no sh
+           bfd template ISIS-BFD
+           ip router isis CORE
+           isis circuit-type level-2-only
+           isis bfd
+           mpls ip
+
+          int g0/0
+           vrf forw C-A
+           ip add 192.168.1.254 255.255.255.252
+           no sh
+
+          int g0/2
+           vrf forw C-C
+           ip add 10.255.0.2 255.255.255.252
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: PE3
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 200
+    y: 80
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/4
+        slot: 4
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname CE-A1
+          no ip domain lookup
+
+          router eigrp IGP-INNER
+           !
+           address-family ipv4 unicast autonomous-system 150
+            !
+            topology base
+            exit-af-topology
+            network 10.0.0.0 0.3.255.255
+            network 10.4.0.0 0.3.255.255
+            network 10.8.0.0 0.3.255.255
+            network 10.12.0.0 0.3.255.255
+            network 192.168.1.248 0.0.0.3
+            eigrp router-id 1.1.1.1
+           exit-address-family
+
+          int g0/0
+           ip add 192.168.1.249 255.255.255.252
+           no sh
+
+          int g0/1
+           ip add 10.0.0.1 255.252.0.0
+           no sh
+
+          int g0/2
+           ip add 10.4.0.1 255.252.0.0
+           no sh
+
+          int g0/3
+           ip add 10.8.0.1 255.252.0.0
+           no sh
+
+          int lo 0
+           ip add 10.12.0.1 255.252.0.0
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: null
+    label: CE-A1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -600
+    y: 80
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname CE-A2
+          no ip domain lookup
+
+          router eigrp IGP-INNER
+           !
+           address-family ipv4 unicast autonomous-system 540
+            !
+            topology base
+            exit-af-topology
+            network 172.16.0.0 0.0.15.255
+            network 192.168.128.0 0.0.127.255
+            network 192.168.1.252 0.0.0.3
+            eigrp router-id 2.2.2.2
+           exit-address-family
+
+          int g0/0
+           ip add 192.168.1.253 255.255.255.252
+           no sh
+
+          int g0/1
+           ip add 192.168.128.1 255.255.128.0
+           no sh
+
+          int g0/2
+           ip add 172.16.0.1 255.255.240.0
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n10
+    image_definition: null
+    label: CE-A2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 400
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname CE-A3
+          no ip domain lookup
+
+          router eigrp IGP-INNER
+           !
+           address-family ipv4 unicast autonomous-system 670
+            !
+            topology base
+            exit-af-topology
+            network 10.16.0.0 0.3.255.255
+            network 10.20.0.0 0.3.255.255
+            network 10.24.0.0 0.3.255.255
+            network 10.28.0.0 0.3.255.255
+            network 192.168.1.244 0.0.0.3
+            eigrp router-id 3.3.3.3
+           exit-address-family
+
+          int g0/0
+           ip add 192.168.1.245 255.255.255.252
+           no sh
+
+          int g0/1
+           ip add 10.16.0.1 255.252.0.0
+           no sh
+
+          int g0/2
+           ip add 10.20.0.1 255.252.0.0
+           no sh
+
+          int g0/3
+           ip add 10.24.0.1 255.252.0.0
+           no sh
+
+          int lo 0
+           ip add 10.28.0.1 255.252.0.0
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n11
+    image_definition: null
+    label: CE-A3
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: 520
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname CE-B1
+          no ip domain lookup
+
+          router ospf 1
+           router-id 1.1.1.1
+           network 10.0.0.0 0.3.255.255 area 0
+           network 10.4.0.0 0.3.255.255 area 0
+           network 10.8.0.0 0.3.255.255 area 0
+           network 172.16.4.0 0.0.3.255 area 0
+           network 10.63.255.252 0.0.0.3 area 0
+
+          int g0/0
+           ip add 10.0.0.1 255.252.0.0
+           no sh
+
+          int g0/1
+           ip add 10.4.0.1 255.252.0.0
+           no sh
+
+          int g0/2
+           ip add 10.63.255.253 255.255.255.252
+           no sh
+
+          int g0/3
+           ip add 10.8.0.1 255.252.0.0
+           no sh
+
+          int lo 0
+           ip add 172.16.4.1 255.255.252.0
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n12
+    image_definition: null
+    label: CE-B1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -520
+    y: -200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname CE-B2
+          no ip domain lookup
+
+          router ospf 1
+           router-id 2.2.2.2
+           network 10.64.0.0 0.3.255.255 area 0
+           network 10.68.0.0 0.3.255.255 area 0
+           network 10.72.0.0 0.3.255.255 area 0
+           network 172.16.8.0 0.0.3.255 area 0
+           network 10.127.255.252 0.0.0.3 area 0
+
+          int g0/0
+           ip add 10.64.0.1 255.252.0.0
+           no sh
+
+          int g0/1
+           ip add 10.68.0.1 255.252.0.0
+           no sh
+
+          int g0/2
+           ip add 10.127.255.253 255.255.255.252
+           no sh
+
+          int g0/3
+           ip add 10.72.0.1 255.252.0.0
+           no sh
+
+          int lo 0
+           ip add 172.16.8.1 255.255.240.0
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n13
+    image_definition: null
+    label: CE-B2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 200
+    y: -280
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname CE-C3
+          no ip domain lookup
+
+          router eigrp IGP-INNER
+           !
+           address-family ipv4 unicast autonomous-system 8789
+            !
+            topology base
+             redistribute bgp 8789 metric 10000 10 255 1 1500
+            exit-af-topology
+            network 10.16.0.0 0.3.255.255
+            network 10.20.0.0 0.3.255.255
+            network 10.24.0.0 0.3.255.255
+            network 10.28.0.0 0.3.255.255
+            eigrp router-id 3.3.3.3
+           exit-address-family
+
+          router bgp 8789
+           bgp log-neighbor-changes
+           neighbor 10.255.0.2 remote-as 57644
+           !
+           address-family ipv4
+            redistribute eigrp 8789
+            neighbor 10.255.0.2 activate
+           exit-address-family
+
+          int g0/0
+           ip add 10.20.0.1 255.252.0.0
+           no sh
+
+          int g0/1
+           ip add 10.16.0.1 255.252.0.0
+           no sh
+
+          int g0/2
+           ip add 10.255.0.1 255.255.255.252
+           no sh
+
+          int g0/3
+           ip add 10.24.0.1 255.252.0.0
+           no sh
+
+          int lo 0
+           ip add 10.28.0.1 255.252.0.0
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n14
+    image_definition: null
+    label: CE-C3
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 201
+    y: 520
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname CE-C2
+          no ip domain lookup
+
+          router eigrp IGP-INNER
+           !
+           address-family ipv4 unicast autonomous-system 4512
+            !
+            topology base
+             redistribute bgp 4512 metric 10000 10 255 1 1500
+            exit-af-topology
+            network 10.0.0.0 0.3.255.255
+            network 10.4.0.0 0.3.255.255
+            network 10.8.0.0 0.3.255.255
+            network 10.12.0.0 0.3.255.255
+            eigrp router-id 2.2.2.2
+           exit-address-family
+
+          router bgp 4512
+           bgp log-neighbor-changes
+           neighbor 10.255.0.2 remote-as 57644
+           !
+           address-family ipv4
+            redistribute eigrp 4512
+            neighbor 10.255.0.2 activate
+           exit-address-family
+
+          int g0/0
+           ip add 10.0.0.1 255.252.0.0
+           no sh
+
+          int g0/1
+           ip add 10.4.0.1 255.252.0.0
+           no sh
+
+          int g0/2
+           ip add 10.255.0.1 255.255.255.252
+           no sh
+
+          int g0/3
+           ip add 10.8.0.1 255.252.0.0
+           no sh
+
+          int lo 0
+           ip add 10.12.0.1 255.252.0.0
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n15
+    image_definition: null
+    label: CE-C2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 440
+    y: 160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname CE-C4
+          no ip domain lookup
+
+          router ospf 1
+           router-id 4.4.4.4
+           network 172.16.0.0 0.0.15.255 area 0
+           network 172.16.16.0 0.0.15.255 area 0
+           network 192.168.0.0 0.0.127.255 area 0
+           redistribute bgp 5672 subnets
+
+          router bgp 5672
+           bgp log-neighbor-changes
+           neighbor 10.255.0.2 remote-as 57644
+           !
+           address-family ipv4
+            redistribute ospf 1
+            neighbor 10.255.0.2 activate
+           exit-address-family
+
+          int g0/0
+           ip add 172.16.0.1 255.255.240.0
+           no sh
+
+          int g0/1
+           ip add 10.255.0.1 255.255.255.252
+           no sh
+
+          int g0/2
+           ip add 172.16.16.1 255.255.240.0
+           no sh
+
+          int g0/3
+           ip add 192.168.0.1 255.255.128.0
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n16
+    image_definition: null
+    label: CE-C4
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: -320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname CE-C1
+          no ip domain lookup
+
+          router ospf 1
+           router-id 1.1.1.1
+           network 172.16.32.0 0.0.15.255 area 0
+           network 192.168.128.0 0.0.127.255 area 0
+           redistribute bgp 1768 subnets
+
+          router bgp 1768
+           bgp log-neighbor-changes
+           neighbor 10.255.0.2 remote-as 57644
+           !
+           address-family ipv4
+            redistribute ospf 1
+            neighbor 10.255.0.2 activate
+           exit-address-family
+
+          int g0/0
+           ip add 192.168.128.1 255.255.128.0
+           no sh
+
+          int g0/1
+           ip add 172.16.32.1 255.255.240.0
+           no sh
+
+          int g0/4
+           ip add 10.255.0.1 255.255.255.252
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n17
+    image_definition: null
+    label: CE-C1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -640
+    y: -80
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/4
+        slot: 4
+        type: physical
+links:
+  - id: l0
+    n1: n0
+    n2: n1
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: P1-GigabitEthernet0/0<->P2-GigabitEthernet0/0
+  - id: l1
+    n1: n2
+    n2: n1
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: P3-GigabitEthernet0/1<->P2-GigabitEthernet0/1
+  - id: l2
+    n1: n1
+    n2: n3
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: P2-GigabitEthernet0/2<->P5-GigabitEthernet0/2
+  - id: l3
+    n1: n3
+    n2: n4
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: P5-GigabitEthernet0/0<->P4-GigabitEthernet0/0
+  - id: l4
+    n1: n2
+    n2: n4
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: P3-GigabitEthernet0/2<->P4-GigabitEthernet0/2
+  - id: l5
+    n1: n0
+    n2: n2
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: P1-GigabitEthernet0/3<->P3-GigabitEthernet0/3
+  - id: l6
+    n1: n5
+    n2: n0
+    i1: i2
+    i2: i2
+    conditioning:
+      loss: 100
+      enabled: true
+    label: PE1-GigabitEthernet0/1<->P1-GigabitEthernet0/1
+  - id: l7
+    n1: n5
+    n2: n1
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: PE1-GigabitEthernet0/3<->P2-GigabitEthernet0/3
+  - id: l8
+    n1: n2
+    n2: n6
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: P3-GigabitEthernet0/0<->PE2-GigabitEthernet0/0
+  - id: l9
+    n1: n8
+    n2: n2
+    i1: i5
+    i2: i5
+    conditioning: {}
+    label: PE3-GigabitEthernet0/4<->P3-GigabitEthernet0/4
+  - id: l10
+    n1: n8
+    n2: n4
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: PE3-GigabitEthernet0/1<->P4-GigabitEthernet0/1
+  - id: l11
+    n1: n7
+    n2: n4
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: PE4-GigabitEthernet0/3<->P4-GigabitEthernet0/3
+  - id: l12
+    n1: n3
+    n2: n7
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: P5-GigabitEthernet0/1<->PE4-GigabitEthernet0/1
+  - id: l13
+    n1: n9
+    n2: n5
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: CE-A1-GigabitEthernet0/0<->PE1-GigabitEthernet0/0
+  - id: l14
+    n1: n10
+    n2: n8
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: CE-A2-GigabitEthernet0/0<->PE3-GigabitEthernet0/0
+  - id: l15
+    n1: n11
+    n2: n7
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: CE-A3-GigabitEthernet0/0<->PE4-GigabitEthernet0/0
+  - id: l16
+    n1: n12
+    n2: n5
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: CE-B1-GigabitEthernet0/2<->PE1-GigabitEthernet0/2
+  - id: l17
+    n1: n13
+    n2: n6
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: CE-B2-GigabitEthernet0/2<->PE2-GigabitEthernet0/2
+  - id: l18
+    n1: n7
+    n2: n14
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: PE4-GigabitEthernet0/2<->CE-C3-GigabitEthernet0/2
+  - id: l19
+    n1: n17
+    n2: n5
+    i1: i5
+    i2: i5
+    conditioning: {}
+    label: CE-C1-GigabitEthernet0/4<->PE1-GigabitEthernet0/4
+  - id: l20
+    n1: n8
+    n2: n15
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: PE3-GigabitEthernet0/2<->CE-C2-GigabitEthernet0/2
+  - id: l21
+    n1: n6
+    n2: n16
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: PE2-GigabitEthernet0/1<->CE-C4-GigabitEthernet0/1
+  - id: l22
+    n1: n0
+    n2: n3
+    i1: i5
+    i2: i5
+    conditioning: {}
+    label: P1-GigabitEthernet0/4<->P5-GigabitEthernet0/4
+lab:
+  description: |-
+    IS-IS BFD
+    MPLS LDP
+    iBGP Route Reflector
+    MP-BGP VPNv4
+    OSPF
+    EIGRP
+    BGP
+  notes: ''
+  title: MPLS L3 VPN
+  version: 0.2.2
