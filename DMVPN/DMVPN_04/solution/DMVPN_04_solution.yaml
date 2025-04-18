@@ -1,0 +1,1934 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: ''
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -360.0
+    y1: -160.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 100.0.20.20
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -380.0
+    y1: -144.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 24.0.200.12
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -113.0
+    y1: -148.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 173.45.21.32
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -132.0
+    y1: -42.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 150.30.120.34
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -141.0
+    y1: -288.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.0.0.25
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -508.0
+    y1: -146.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.10.0.25
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 304.0
+    y1: -267.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.30.0.25
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 306.0
+    y1: -22.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 172.16.3.0/29
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 66.0
+    y1: -62.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 16
+    text_bold: false
+    text_content: 172.16.4.0/29
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 146.0
+    y1: -22.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.40.0.25
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 306.0
+    y1: 58.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.20.0.25
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 24.0
+    y1: -147.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 172.16.3.0/29
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 66.0
+    y1: -302.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Implement IPv4overIPv4 DMVPN Phase 3 with IPSec (IKEv2):
+      1) Implement Security (IPSec) with:
+       pre-sheard key DMVPN-KEY
+       transform-set ESP-AES256 ESP-SHA512-HMAC
+       security-association lifetime 100MB/15min
+       perfect forward secrecy with DH group 20
+       dead peer detection on-demend
+       nat keepelives
+       max replay window-size
+      1') For BR3:
+       limit max-in-negotation-sa in/outgoing to 3
+       max-sa to 7
+       cookie-challenge to 3
+      2) Implement FVRF (Front Door) for DMVPN
+      3) Implement Tunnel100 on HQ (Hub) and BR1-BR4 (Spoke)
+      4) Enabel EIGRP in named mode as overlay to connect all sites
+      5) Test connectivity between sites
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 560.0
+    y1: -320.0
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      BR3 and BR4 both are behind the same NAT and cannot perform spoke-to-spoke tunnel.
+      Communication go through HQ (hub).
+      Communication beetwen spokes located behind different NATs work normally.
+    text_font: monospace
+    text_italic: false
+    text_size: 15
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -600.0
+    y1: 120.0
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      *Mar 21 19:33:58.407: %NHRP-3-PAKERROR: Received Error Indication from 192.168.0.1, code:
+       protocol generic error(7), (trigger src: 192.168.0.101 (nbma: 172.16.3.2) dst: 10.30.0.25),
+       offset: 0, data: 00 01 08 00 00 00 00 00 00 FF 00 6B F7 05 00 34
+
+      BR1 has the same inside-local IP address as BR3 (172.16.3.2).
+      NHRP must have unique nbma for all hubs/spokes even later NHRP use NATed address.
+      You can see it in 'sh ip nhrp' (Claimed NBMA address: IP-adress-inside-local).
+      ERROR show up only when NHS (NHRP) has already association using nmba.
+      If current association times out, NHS will perform new (correct) association with BR1.
+      It cause that BR3 will lost connectivity and error will show up on BR3.
+    text_font: monospace
+    text_italic: false
+    text_size: 15
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -521.6666666666666
+    y1: -626.6666666666667
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#FF0000'
+    rotation: 0
+    text_bold: true
+    text_content: VERY DANGEROUS
+    text_font: monospace
+    text_italic: false
+    text_size: 29
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -517.2968749999998
+    y1: -669.9999999999999
+    z_index: 3
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      do sh dmvpn | beg Int
+      do sh dmvpn det | beg Int
+      do sh ip nhrp br | beg Int
+      do sh ip nhrp det | beg Int
+      do sh eigrp add ipv4 100 nei
+      do sh ip route | beg Gat
+      do sh ip route next-hop-override | beg Gat
+
+      do sh ip nhrp sum
+      do sh ip nhrp stats
+      do ping 10.30.0.25
+      do traceroute 10.30.0.25
+
+      do sh cryp ikev2 sa
+      do sh cryp ikev2 prof
+      do sh cryp ikev2 stats
+      do sh cryp ikev2 sess
+      do sh cryp ipsec sa
+      do sh cryp ipsec prof
+      do sh cryp ipsec tran
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 1120.0
+    y1: -360.0
+    z_index: 2
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 4634 bytes
+          !
+          ! Last configuration change at 15:10:09 UTC Fri Apr 18 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname BR3
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          vrf definition DMVPN
+           !
+           address-family ipv4
+           exit-address-family
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          crypto ikev2 keyring DMVPN
+           peer ANY-IPv4
+            address 0.0.0.0 0.0.0.0
+            pre-shared-key DMVPN-KEY
+           !
+          !
+          !
+          crypto ikev2 profile DMVPN
+           match fvrf DMVPN
+           match identity remote address 0.0.0.0
+           authentication remote pre-share
+           authentication local pre-share
+           keyring local DMVPN
+           dpd 30 5 on-demand
+          !
+          crypto ikev2 limit max-in-negotation-sa 3 outgoing
+          crypto ikev2 limit max-in-negotation-sa 3
+          crypto ikev2 limit max-sa 7
+          crypto ikev2 cookie-challenge 3
+          crypto isakmp nat keepalive 30
+          !
+          crypto ipsec security-association replay window-size 1024
+          !
+          crypto ipsec transform-set DMVPN esp-aes 256 esp-sha512-hmac
+           mode transport
+          !
+          crypto ipsec profile DMVPN
+           set security-association lifetime kilobytes 1000000
+           set security-association lifetime seconds 900
+           set transform-set DMVPN
+           set pfs group20
+           set ikev2-profile DMVPN
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Tunnel100
+           bandwidth 100000
+           ip address 192.168.0.103 255.255.255.0
+           no ip redirects
+           ip mtu 1400
+           ip nhrp authentication PASS123
+           ip nhrp network-id 100
+           ip nhrp nhs 192.168.0.1 nbma 100.0.20.20 multicast
+           ip tcp adjust-mss 1360
+           tunnel source GigabitEthernet0/1
+           tunnel mode gre multipoint
+           tunnel key 100
+           tunnel vrf DMVPN
+           tunnel protection ipsec profile DMVPN
+          !
+          interface GigabitEthernet0/0
+           ip address 10.30.0.25 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1
+           vrf forwarding DMVPN
+           ip address 172.16.3.2 255.255.255.248
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          !
+          router eigrp OVERLAY-DMVPN
+           !
+           address-family ipv4 unicast autonomous-system 100
+            !
+            af-interface GigabitEthernet0/0
+             passive-interface
+            exit-af-interface
+            !
+            topology base
+            exit-af-topology
+            network 10.30.0.0 0.0.0.255
+            network 192.168.0.0
+            eigrp router-id 0.0.0.3
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          ip route vrf DMVPN 0.0.0.0 0.0.0.0 172.16.3.1
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: BR3
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 280
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 4481 bytes
+          !
+          ! Last configuration change at 15:10:05 UTC Fri Apr 18 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname BR1
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          vrf definition DMVPN
+           !
+           address-family ipv4
+           exit-address-family
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          crypto ikev2 keyring DMVPN
+           peer ANY-IPv4
+            address 0.0.0.0 0.0.0.0
+            pre-shared-key DMVPN-KEY
+           !
+          !
+          !
+          crypto ikev2 profile DMVPN
+           match fvrf DMVPN
+           match identity remote address 0.0.0.0
+           authentication remote pre-share
+           authentication local pre-share
+           keyring local DMVPN
+           dpd 30 5 on-demand
+          !
+          crypto isakmp nat keepalive 30
+          !
+          crypto ipsec security-association replay window-size 1024
+          !
+          crypto ipsec transform-set DMVPN esp-aes 256 esp-sha512-hmac
+           mode transport
+          !
+          crypto ipsec profile DMVPN
+           set security-association lifetime kilobytes 1000000
+           set security-association lifetime seconds 900
+           set transform-set DMVPN
+           set pfs group20
+           set ikev2-profile DMVPN
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Tunnel100
+           bandwidth 100000
+           ip address 192.168.0.101 255.255.255.0
+           no ip redirects
+           ip mtu 1400
+           ip nhrp authentication PASS123
+           ip nhrp network-id 100
+           ip nhrp nhs 192.168.0.1 nbma 100.0.20.20 multicast
+           ip tcp adjust-mss 1360
+           tunnel source GigabitEthernet0/1
+           tunnel mode gre multipoint
+           tunnel key 100
+           tunnel vrf DMVPN
+           tunnel protection ipsec profile DMVPN
+          !
+          interface GigabitEthernet0/0
+           ip address 10.10.0.25 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1
+           vrf forwarding DMVPN
+           ip address 172.16.3.3 255.255.255.248
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          !
+          router eigrp OVERLAY-DMVPN
+           !
+           address-family ipv4 unicast autonomous-system 100
+            !
+            af-interface GigabitEthernet0/0
+             passive-interface
+            exit-af-interface
+            !
+            topology base
+            exit-af-topology
+            network 10.10.0.0 0.0.0.255
+            network 192.168.0.0
+            eigrp router-id 0.0.0.1
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          ip route vrf DMVPN 0.0.0.0 0.0.0.0 172.16.3.1
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: BR1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 280
+    y: -280
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 4481 bytes
+          !
+          ! Last configuration change at 15:10:16 UTC Fri Apr 18 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname BR2
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          vrf definition DMVPN
+           !
+           address-family ipv4
+           exit-address-family
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          crypto ikev2 keyring DMVPN
+           peer ANY-IPv4
+            address 0.0.0.0 0.0.0.0
+            pre-shared-key DMVPN-KEY
+           !
+          !
+          !
+          crypto ikev2 profile DMVPN
+           match fvrf DMVPN
+           match identity remote address 0.0.0.0
+           authentication remote pre-share
+           authentication local pre-share
+           keyring local DMVPN
+           dpd 30 5 on-demand
+          !
+          crypto isakmp nat keepalive 30
+          !
+          crypto ipsec security-association replay window-size 1024
+          !
+          crypto ipsec transform-set DMVPN esp-aes 256 esp-sha512-hmac
+           mode transport
+          !
+          crypto ipsec profile DMVPN
+           set security-association lifetime kilobytes 1000000
+           set security-association lifetime seconds 900
+           set transform-set DMVPN
+           set pfs group20
+           set ikev2-profile DMVPN
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Tunnel100
+           bandwidth 100000
+           ip address 192.168.0.102 255.255.255.0
+           no ip redirects
+           ip mtu 1400
+           ip nhrp authentication PASS123
+           ip nhrp network-id 100
+           ip nhrp nhs 192.168.0.1 nbma 100.0.20.20 multicast
+           ip tcp adjust-mss 1360
+           tunnel source GigabitEthernet0/2
+           tunnel mode gre multipoint
+           tunnel key 100
+           tunnel vrf DMVPN
+           tunnel protection ipsec profile DMVPN
+          !
+          interface GigabitEthernet0/0
+           ip address 10.20.0.25 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           vrf forwarding DMVPN
+           ip address 24.0.200.12 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          !
+          router eigrp OVERLAY-DMVPN
+           !
+           address-family ipv4 unicast autonomous-system 100
+            !
+            af-interface GigabitEthernet0/0
+             passive-interface
+            exit-af-interface
+            !
+            topology base
+            exit-af-topology
+            network 10.20.0.0 0.0.0.255
+            network 192.168.0.0
+            eigrp router-id 0.0.0.2
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          ip route vrf DMVPN 0.0.0.0 0.0.0.0 24.0.200.15
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: BR2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: -160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname ISP
+
+          int g0/0
+           ip add 100.0.20.15 255.255.255.0
+           no sh
+
+          int g0/1
+           ip add 150.30.120.15 255.255.255.0
+           no sh
+
+          int g0/2
+           ip add 24.0.200.15 255.255.255.0
+           no sh
+
+          int g0/3
+           ip add 173.45.21.15 255.255.255.0
+           no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: ISP
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -200
+    y: -160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 4502 bytes
+          !
+          ! Last configuration change at 15:10:22 UTC Fri Apr 18 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname HQ
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          vrf definition DMVPN
+           !
+           address-family ipv4
+           exit-address-family
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          crypto ikev2 keyring DMVPN
+           peer ANY-IPv4
+            address 0.0.0.0 0.0.0.0
+            pre-shared-key DMVPN-KEY
+           !
+          !
+          !
+          crypto ikev2 profile DMVPN
+           match fvrf DMVPN
+           match identity remote address 0.0.0.0
+           authentication remote pre-share
+           authentication local pre-share
+           keyring local DMVPN
+          !
+          !
+          crypto ipsec security-association replay window-size 1024
+          !
+          crypto ipsec transform-set DMVPN esp-aes 256 esp-sha512-hmac
+           mode transport
+          !
+          crypto ipsec profile DMVPN
+           set security-association lifetime kilobytes 1000000
+           set security-association lifetime seconds 900
+           set transform-set DMVPN
+           set pfs group20
+           set ikev2-profile DMVPN
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Tunnel100
+           bandwidth 100000
+           ip address 192.168.0.1 255.255.255.0
+           no ip redirects
+           ip mtu 1400
+           ip nhrp authentication PASS123
+           ip nhrp network-id 100
+           ip nhrp redirect
+           ip tcp adjust-mss 1360
+           tunnel source GigabitEthernet0/0
+           tunnel mode gre multipoint
+           tunnel key 100
+           tunnel vrf DMVPN
+           tunnel protection ipsec profile DMVPN
+          !
+          interface GigabitEthernet0/0
+           vrf forwarding DMVPN
+           ip address 100.0.20.20 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1
+           ip address 10.0.0.25 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          !
+          router eigrp OVERLAY-DMVPN
+           !
+           address-family ipv4 unicast autonomous-system 100
+            !
+            af-interface Tunnel100
+             summary-address 10.0.0.0 255.192.0.0
+             no split-horizon
+            exit-af-interface
+            !
+            af-interface GigabitEthernet0/1
+             passive-interface
+            exit-af-interface
+            !
+            topology base
+            exit-af-topology
+            network 10.0.0.0 0.0.0.255
+            network 192.168.0.0
+            eigrp router-id 0.0.0.255
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          ip route vrf DMVPN 0.0.0.0 0.0.0.0 100.0.20.15
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: HQ
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -400
+    y: -160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC1
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+
+          ip addr add
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: PC1
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: 480
+    y: -280
+    interfaces:
+      - id: i0
+        label: eth0
+        slot: 0
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC3
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: PC3
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: -560
+    y: -160
+    interfaces:
+      - id: i0
+        label: eth0
+        slot: 0
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC2
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: PC2
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: 480
+    y: -40
+    interfaces:
+      - id: i0
+        label: eth0
+        slot: 0
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname NAT
+
+          int g0/3
+           ip add 173.45.21.32 255.255.255.0
+           ip nat outside
+           no sh
+
+          int g0/1
+           ip add 172.16.3.1 255.255.255.248
+           ip nat inside
+           no sh
+
+          int g0/2
+           ip add 172.16.4.1 255.255.255.248
+           ip nat inside
+           no sh
+
+          ip route 0.0.0.0 0.0.0.0 173.45.21.15
+
+          ip nat inside source static 172.16.3.2 173.45.21.3
+          ip nat inside source static 172.16.4.2 173.45.21.4
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: NAT
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 4481 bytes
+          !
+          ! Last configuration change at 15:10:14 UTC Fri Apr 18 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname BR4
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          vrf definition DMVPN
+           !
+           address-family ipv4
+           exit-address-family
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          crypto ikev2 keyring DMVPN
+           peer ANY-IPv4
+            address 0.0.0.0 0.0.0.0
+            pre-shared-key DMVPN-KEY
+           !
+          !
+          !
+          crypto ikev2 profile DMVPN
+           match fvrf DMVPN
+           match identity remote address 0.0.0.0
+           authentication remote pre-share
+           authentication local pre-share
+           keyring local DMVPN
+           dpd 30 5 on-demand
+          !
+          crypto isakmp nat keepalive 30
+          !
+          crypto ipsec security-association replay window-size 1024
+          !
+          crypto ipsec transform-set DMVPN esp-aes 256 esp-sha512-hmac
+           mode transport
+          !
+          crypto ipsec profile DMVPN
+           set security-association lifetime kilobytes 1000000
+           set security-association lifetime seconds 900
+           set transform-set DMVPN
+           set pfs group20
+           set ikev2-profile DMVPN
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Tunnel100
+           bandwidth 100000
+           ip address 192.168.0.104 255.255.255.0
+           no ip redirects
+           ip mtu 1400
+           ip nhrp authentication PASS123
+           ip nhrp network-id 100
+           ip nhrp nhs 192.168.0.1 nbma 100.0.20.20 multicast
+           ip tcp adjust-mss 1360
+           tunnel source GigabitEthernet0/1
+           tunnel mode gre multipoint
+           tunnel key 100
+           tunnel vrf DMVPN
+           tunnel protection ipsec profile DMVPN
+          !
+          interface GigabitEthernet0/0
+           ip address 10.40.0.25 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1
+           vrf forwarding DMVPN
+           ip address 172.16.4.2 255.255.255.248
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          !
+          router eigrp OVERLAY-DMVPN
+           !
+           address-family ipv4 unicast autonomous-system 100
+            !
+            af-interface GigabitEthernet0/0
+             passive-interface
+            exit-af-interface
+            !
+            topology base
+            exit-af-topology
+            network 10.40.0.0 0.0.0.255
+            network 192.168.0.0
+            eigrp router-id 0.0.0.4
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          ip route vrf DMVPN 0.0.0.0 0.0.0.0 172.16.4.1
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: null
+    label: BR4
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 280
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC2
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n10
+    image_definition: null
+    label: PC4
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: 480
+    y: 40
+    interfaces:
+      - id: i0
+        label: eth0
+        slot: 0
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC1
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+
+          ip addr add
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n11
+    image_definition: null
+    label: PC5
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: 160
+    y: -160
+    interfaces:
+      - id: i0
+        label: eth0
+        slot: 0
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname NAT0
+
+          int g0/1
+           ip add 150.30.120.34 255.255.255.0
+           ip nat outside
+           no sh
+
+          int g0/2
+           ip add 172.16.3.1 255.255.255.248
+           ip nat inside
+           no sh
+
+          ip route 0.0.0.0 0.0.0.0 150.30.120.15
+
+          ip nat inside source static 172.16.3.3 150.30.120.1
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n12
+    image_definition: null
+    label: NAT0
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: -280
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+links:
+  - id: l0
+    n1: n4
+    n2: n3
+    i1: i1
+    i2: i1
+    conditioning:
+      latency: 10000
+      enabled: false
+      loss: 50
+    label: HQ-GigabitEthernet0/0<->ISP-GigabitEthernet0/0
+  - id: l1
+    n1: n3
+    n2: n2
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: ISP-GigabitEthernet0/2<->BR2-GigabitEthernet0/2
+  - id: l2
+    n1: n4
+    n2: n6
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: HQ-GigabitEthernet0/1<->PC3-eth0
+  - id: l3
+    n1: n1
+    n2: n5
+    i1: i1
+    i2: i0
+    conditioning: {}
+    label: BR1-GigabitEthernet0/0<->PC1-eth0
+  - id: l4
+    n1: n0
+    n2: n7
+    i1: i1
+    i2: i0
+    conditioning: {}
+    label: BR3-GigabitEthernet0/0<->PC2-eth0
+  - id: l5
+    n1: n3
+    n2: n8
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: ISP-GigabitEthernet0/3<->NAT-GigabitEthernet0/3
+  - id: l6
+    n1: n8
+    n2: n0
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: NAT-GigabitEthernet0/1<->BR3-GigabitEthernet0/1
+  - id: l7
+    n1: n9
+    n2: n10
+    i1: i1
+    i2: i0
+    conditioning: {}
+    label: BR4-GigabitEthernet0/0<->PC4-eth0
+  - id: l8
+    n1: n9
+    n2: n8
+    i1: i2
+    i2: i3
+    conditioning: {}
+    label: BR4-GigabitEthernet0/1<->NAT-GigabitEthernet0/2
+  - id: l9
+    n1: n11
+    n2: n2
+    i1: i0
+    i2: i1
+    conditioning: {}
+    label: PC5-eth0<->BR2-GigabitEthernet0/0
+  - id: l10
+    n1: n3
+    n2: n12
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: ISP-GigabitEthernet0/1<->NAT0-GigabitEthernet0/1
+  - id: l11
+    n1: n12
+    n2: n1
+    i1: i3
+    i2: i2
+    conditioning: {}
+    label: NAT0-GigabitEthernet0/2<->BR1-GigabitEthernet0/1
+lab:
+  description: |-
+    IPv4overIPv4 DMVPN Phase 3
+    FVRF
+    IPSec
+    NAT
+  notes: ''
+  title: DMVPN 04 solution
+  version: 0.2.2

@@ -124,100 +124,6 @@ annotations:
     color: '#000000'
     rotation: 0
     text_bold: false
-    text_content: |-
-      ! Spoke
-      interface Tunnel100
-       ip address 192.168.0.104 255.255.255.0
-       no ip redirects
-       ip mtu 1400
-       ip nhrp authentication PASS123
-       ip nhrp network-id 100
-       ip nhrp nhs 192.168.0.1 nbma 100.0.20.20 multicast
-       ip nhrp shortcut
-       ip tcp adjust-mss 1360
-       tunnel source GigabitEthernet0/1
-       tunnel mode gre multipoint
-       tunnel key 100
-       tunnel vrf DMVPN
-       tunnel protection ipsec profile DMVPN
-       bandwidth 100000
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 1020.0
-    y1: -304.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      router eigrp OVERLAY-DMVPN
-       !
-       address-family ipv4 unicast autonomous-system 100
-        ! FOR HQ:
-        ! af-interface Tunnel100
-         ! sum 10.0.0.0 255.192.0.0
-         ! no split-horizon
-        ! exit-af-interface
-        !
-        af-interface GigabitEthernet0/0
-         passive-interface
-        exit-af-interface
-        topology base
-        exit-af-topology
-        network 192.168.0.0 0.0.0.255
-        network 10.40.0.0 0.0.0.255
-        eigrp router-id 0.0.0.4
-       exit-address-family
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: -1092.0
-    y1: -282.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      ! HUB
-      interface Tunnel100
-       ip address 192.168.0.1 255.255.255.0
-       no ip redirects
-       ip mtu 1400
-       ip nhrp authentication PASS123
-       ip nhrp network-id 100
-       ip nhrp redirect
-       ip tcp adjust-mss 1360
-       tunnel source GigabitEthernet0/0
-       tunnel mode gre multipoint
-       tunnel key 100
-       tunnel vrf DMVPN
-       tunnel protection ipsec profile DMVPN
-       bandwidth 100000
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: 652.0
-    y1: -306.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
     text_content: 172.16.3.0/29
     text_font: monospace
     text_italic: false
@@ -227,54 +133,6 @@ annotations:
     type: text
     x1: 66.0
     y1: -62.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
-    text_content: |-
-      crypto ikev2 keyring DMVPN
-       peer ANY-IPv4
-        address 0.0.0.0 0.0.0.0
-        pre-shared-key DMVPN-KEY
-
-      crypto ikev2 profile DMVPN
-       match fvrf DMVPN
-       match identity remote address 0.0.0.0
-       authentication remote pre-share
-       authentication local pre-share
-       keyring local DMVPN
-       ! dpd for spokes
-       ! dpd 30 5 on-demand
-
-      crypto ipsec transform-set DMVPN esp-aes 256 esp-sha512-hmac
-       mode transport
-
-      crypto ipsec profile DMVPN
-       set security-association lifetime kilobytes 1000000
-       set security-association lifetime seconds 900
-       set transform-set DMVPN
-       set pfs group20
-       set ikev2-profile DMVPN
-
-      crypto ipsec security-association replay window-size 1024
-      ! for spokes
-      ! crypto isakmp nat keepalive 30
-
-      ! BR3 has a week router and need some IPSec limitation
-      ! crypto ikev2 limit max-in-negotation-sa 3 outgoing
-      ! crypto ikev2 limit max-in-negotation-sa 3
-      ! crypto ikev2 limit max-sa 7
-      ! crypto ikev2 cookie-challenge 3
-    text_font: monospace
-    text_italic: false
-    text_size: 12
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: -1708.0
-    y1: -426.0
     z_index: 1
   - border_color: '#00000000'
     border_style: ''
@@ -326,24 +184,6 @@ annotations:
     color: '#000000'
     rotation: 0
     text_bold: false
-    text_content: |-
-      BR3 and BR4 both are behind the same NAT and cannot perform spoke-to-spoke tunnel.
-      Communication go through HQ (hub).
-      Communication beetwen spokes located behind diffrent NAT work normally.
-    text_font: monospace
-    text_italic: false
-    text_size: 15
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: -254.0
-    y1: 98.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#000000'
-    rotation: 0
-    text_bold: false
     text_content: 172.16.3.0/29
     text_font: monospace
     text_italic: false
@@ -360,40 +200,32 @@ annotations:
     rotation: 0
     text_bold: false
     text_content: |-
-      *Mar 21 19:33:58.407: %NHRP-3-PAKERROR: Received Error Indication from 192.168.0.1, code:
-       protocol generic error(7), (trigger src: 192.168.0.101 (nbma: 172.16.3.2) dst: 10.30.0.25),
-       offset: 0, data: 00 01 08 00 00 00 00 00 00 FF 00 6B F7 05 00 34
-
-      BR1 has the same inside-local IP address as BR3 (172.16.3.2).
-      NHRP must have unique nbma for all hubs/spokes even later NHRP use NATed address.
-      You can see it in 'sh ip nhrp' (Claimed NBMA address: IP-adress-inside-local).
-      ERROR show up only when NHS (NHRP) has already association using nmba.
-      If current association times out, NHS will perform new (correct) association with BR1.
-      It cause that BR3 will lost connectivity and error will show up on BR3.
+      Implement IPv4overIPv4 DMVPN Phase 3 with IPSec (IKEv2):
+      1) Implement Security (IPSec) with:
+       pre-sheard key DMVPN-KEY
+       transform-set ESP-AES256 ESP-SHA512-HMAC
+       security-association lifetime 100MB/15min
+       perfect forward secrecy with DH group 20
+       dead peer detection on-demend
+       nat keepelives
+       max replay window-size
+      1') For BR3:
+       limit max-in-negotation-sa in/outgoing to 3
+       max-sa to 7
+       cookie-challenge to 3
+      2) Implement FVRF (Front Door) for DMVPN
+      3) Implement Tunnel100 on HQ (Hub) and BR1-BR4 (Spoke)
+      4) Enabel EIGRP in named mode as overlay to connect all sites
+      5) Test connectivity between sites
     text_font: monospace
     text_italic: false
-    text_size: 15
+    text_size: 12
     text_unit: pt
     thickness: 1
     type: text
-    x1: -454.0
-    y1: -622.0
-    z_index: 1
-  - border_color: '#00000000'
-    border_style: ''
-    color: '#FF0000'
-    rotation: 0
-    text_bold: true
-    text_content: VERY DANGEROUS
-    text_font: monospace
-    text_italic: false
-    text_size: 25
-    text_unit: pt
-    thickness: 1
-    type: text
-    x1: -454.0
-    y1: -662.0
-    z_index: 1
+    x1: 560.0
+    y1: -320.0
+    z_index: 2
 nodes:
   - boot_disk_size: null
     configuration:
@@ -554,7 +386,7 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
-        content: |
+        content: |-
           hostname ISP
 
           int g0/0
@@ -1003,14 +835,14 @@ links:
     i1: i4
     i2: i4
     conditioning: {}
-    label: ISP-GigabitEthernet0/3<->BR3_0-GigabitEthernet0/3
+    label: ISP-GigabitEthernet0/3<->NAT-GigabitEthernet0/3
   - id: l6
     n1: n8
     n2: n0
     i1: i2
     i2: i2
     conditioning: {}
-    label: BR3_0-GigabitEthernet0/1<->BR3-GigabitEthernet0/1
+    label: NAT-GigabitEthernet0/1<->BR3-GigabitEthernet0/1
   - id: l7
     n1: n9
     n2: n10
