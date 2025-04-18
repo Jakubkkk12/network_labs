@@ -1,5 +1,5 @@
 # network_labs
-Labs made with Cisco CML
+Lab categories:
 
 1) MPLS
 2) DMVPN
