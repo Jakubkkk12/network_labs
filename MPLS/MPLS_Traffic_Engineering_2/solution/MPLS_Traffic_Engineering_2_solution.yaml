@@ -1,0 +1,2777 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: ''
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -160.0
+    y1: -240.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 70
+    text_bold: false
+    text_content: 172.16.13.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -19.999999999999996
+    y1: -246.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 36
+    text_bold: false
+    text_content: 172.16.14.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 46.763716812694014
+    y1: -256.45575219040813
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 10
+    text_bold: false
+    text_content: 172.16.23.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -172.99999999999991
+    y1: -166.99999999999997
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 45
+    text_bold: false
+    text_content: 172.16.25.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -173.99999999999991
+    y1: -126.99999999999997
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 172.16.34.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 43.00000000000014
+    y1: -135.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 305
+    text_bold: false
+    text_content: 172.16.35.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -86.99999999999994
+    y1: -24.99999999999997
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 338
+    text_bold: false
+    text_content: 172.16.56.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -239.99999999999997
+    y1: 48.000000000000014
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 63
+    text_bold: false
+    text_content: 172.16.57.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -36.99999999999993
+    y1: 26.000000000000007
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 16
+    text_bold: false
+    text_content: 172.16.67.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -171.1814159365306
+    y1: 94.83539824767351
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 305
+    text_bold: false
+    text_content: 172.16.47.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 52.00000000000004
+    y1: 60.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      no ip domain lookup
+
+      int lo 0
+       ip add 1.1.1.1 255.255.255.255
+
+      key chain ISIS-BFD-KEY
+       key 100
+        key-string BFDPASS
+        cryptographic-algorithm hmac-sha-1
+
+      bfd-template single-hop ISIS-BFD
+       interval min-tx 1000 min-rx 1000 multiplier 3
+       authentication sha-1 keychain ISIS-BFD-KEY
+       echo
+
+      mpls traffic-eng tunnels
+
+      router isis CORE
+       mpls traffic-eng router-id Loopback0
+       mpls traffic-eng level-2
+       net 49.0000.0000.0000.0001.00
+       is-type level-2-only
+       router-id Loopback0
+       domain-password MPLS-CORE
+       metric-style wide
+       log-adjacency-changes
+       passive-interface Loopback0
+       redistribute connected
+
+      int lo 0
+       ip router isis CORE
+       isis circuit-type level-2-only
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -874.260935935902
+    y1: -398.86959559388197
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.1.0.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -170.6035018044352
+    y1: -337.37951030186736
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.2.0.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -339.01012520998614
+    y1: -175.80897998196266
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.4.0.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 223.0918844674617
+    y1: -137.97988230910386
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.6.0.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -378.40975320274964
+    y1: 61.58143873577106
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.7.0.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 24.130935429823275
+    y1: 142.828582951453
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Lo:
+      10.4.1.0/24
+      10.4.2.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 214.2465821067857
+    y1: -105.57804045409796
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Lo:
+      10.7.1.0/24
+      10.7.2.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 14.36187495768803
+    y1: 179.73392251285262
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Lo:
+      10.6.1.0/24
+      10.6.2.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -268.0171206227735
+    y1: 102.50519684723022
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Lo:
+      10.2.1.0/24
+      10.2.2.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -275.7769718198788
+    y1: -233.0609057481896
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Lo:
+      10.1.1.0/24
+      10.1.2.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 9
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -50.16482284931007
+    y1: -373.24579890090536
+    z_index: 1
+  - border_color: '#808080FF'
+    border_radius: 0
+    border_style: ''
+    color: '#EEEEEE'
+    thickness: 1
+    type: rectangle
+    x1: -447.51615897770836
+    y1: -401.84633322977015
+    x2: 814.4081692444504
+    y2: 647.7933311797793
+    z_index: -2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      IS-IS
+      MPLS-TE
+    text_font: monospace
+    text_italic: false
+    text_size: 20
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -434.0226490494127
+    y1: -388.02127182522634
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Topology considerations:
+      1) Connections between (affinity 0x1100000)
+         R1<->R3
+         R3<->R5
+         R5<->R7
+         are GOLD (include SILVER)
+
+      2) Connections between (affinity 0x01000000)
+         R5<->R6
+         R3<->R4
+         are SILVER
+
+      3) Connections between (affinity 0x00F00000)
+         R1<->R4
+         R4<->R7
+         are high delay
+
+      4) Connections between (administrative-weight)
+         R2<->R3
+         R2<->R5
+         are 5x faster connection
+
+      5) R7 have the worst hardware in all topology
+
+      6) R5 and R5 are high performance devices
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 384.347519024139
+    y1: -394.54212959126795
+    z_index: 5
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      MPLS-TE Tunnels:
+      BW = 100Mb
+
+      D1) R4<->R6: (affinity)
+      for IPP 5-7 must avoid  high delay links
+      for IPP 3-4 must use SILVER
+      for IPP 0-2 don't care
+
+      D2) R1->R7: (dynamic)
+      Must go throught the fastest path
+      Must have node-protection (R2)
+
+      D3) R1<-R7: (explicit-path with next-address loose)
+      Must go throught high performance devices
+      Must have link-protection (R7->R5)
+
+      D4) R2->R7: (explicit-path)
+      Static Path: R2->R5->R7
+      Must have path-protection: R2->R3->R4->R7
+
+      D5) R2->R4: (explicit-path with exclude-address)
+      Cannot go throught R3
+      Add path-option dynamic with reduced BW by half
+
+      D6) R2<-R4: (dynamic)
+      Routing with PBR only 10.2.0.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 814.7130290429252
+    y1: -391.4982604357542
+    z_index: 5
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      int tun 40
+       descri TASK-4
+       ip unnumbered lo0
+       tun mode mpls tr
+       tun dest 7.7.7.7
+       tun mpls tr band 100000
+       tun mpls tr pri 3 3
+       tun mpls tr aff 0x0 mask 0x0
+       tun mpls tr autor announce
+       tun mpls tr path-o 10 ex na TASK-4
+       tun mpls tr path-s met te
+       tun mpls tr record-route
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1243.4453702560043
+    y1: 127.51190287260147
+    z_index: 5
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      int g0/0
+       ip add 172.16.13.1 255.255.255.0
+       no sh
+       bfd template ISIS-BFD
+       ip router isis CORE
+       isis circuit-type level-2-only
+       isis bfd
+       mpls traffic-eng tunnels
+       ip rsvp bandwidth percent 80 percent 20
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1251.904161906997
+    y1: -395.60673121170953
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      ! INT FOR IP PREFIXES
+      int g0/1
+       ip 10.1.0.1 255.255.255.0
+       no sh
+
+      int lo 10
+       ip add 10.1.1.1 255.252.255.0
+
+      int lo 20
+       ip add 10.1.2.1 255.252.255.0
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1240.9071637105453
+    y1: -152.5857185868715
+    z_index: 4
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      !SHOW:
+      show mpls interfaces
+      show mpls label range
+      show mpls memory
+      show mpls ip bindings
+      show mpls ip bindings detail
+      show mpls forwarding-table
+      show mpls forwarding-table detail
+      show mpls traffic-eng tunnels
+      show mpls traffic-eng tunnels brief
+      show mpls traffic-eng tunnels destination 1.1.1.1
+      show mpls traffic-eng tunnels tunnel tun10
+      show mpls traffic-eng fast-reroute database
+      show mpls traffic-eng fast-reroute database detail
+      show mpls traffic-eng tunnels protection
+      show mpls traffic-eng tunnels backup
+      show mpls traffic-eng link-management advertisements
+      show mpls traffic-eng topology
+      show mpls traffic-eng topology path tun10
+      show mpls traffic-eng exp
+      show mpls traffic-eng autoroute
+      show ip rsvp interface detail g0/0
+      show ip rsvp counters | begin All
+      show ip rsvp sender detail
+      show ip rsvp reservation detail
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 1281.1451175813008
+    y1: -400.9469324769453
+    z_index: 5
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 5470 bytes
+          !
+          ! Last configuration change at 20:40:08 UTC Thu May 8 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R2
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          no ip domain lookup
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          mpls traffic-eng tunnels
+          !
+          !
+          !
+          key chain ISIS-BFD-KEY
+           key 100
+            key-string BFDPASS
+            cryptographic-algorithm hmac-sha-1
+          !
+          !
+          !
+          redundancy
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 1000 min-rx 1000 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           ip address 2.2.2.2 255.255.255.255
+           ip router isis CORE
+           isis circuit-type level-2-only
+          !
+          interface Loopback10
+           ip address 10.2.1.2 255.255.255.0
+          !
+          interface Loopback20
+           ip address 10.2.2.2 255.255.255.0
+          !
+          interface Tunnel40
+           description TASK-4
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 7.7.7.7
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x0 mask 0x0
+           tunnel mpls traffic-eng path-option 10 explicit name TASK-4
+           tunnel mpls traffic-eng path-option protect 10 explicit name TASK-2-PP
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           no routing dynamic
+          !
+          interface Tunnel50
+           description TASK-5
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 4.4.4.4
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x0 mask 0x0
+           tunnel mpls traffic-eng path-option 10 explicit name TASK-5
+           tunnel mpls traffic-eng path-option 1000 dynamic bandwidth  50000
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           no routing dynamic
+          !
+          interface GigabitEthernet0/0
+           ip address 10.2.0.2 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1
+           ip address 172.16.23.2 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng administrative-weight 2
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           ip address 172.16.25.2 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng administrative-weight 2
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0002.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           redistribute connected
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ip explicit-path name TASK-5 enable
+           exclude-address 3.3.3.3
+          !
+          ip explicit-path name TASK-4 enable
+           next-address 5.5.5.5
+           next-address 7.7.7.7
+          !
+          ip explicit-path name TASK-2-PP enable
+           next-address 3.3.3.3
+           next-address 4.4.4.4
+           next-address 7.7.7.7
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: R2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -240
+    y: -160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 4953 bytes
+          !
+          ! Last configuration change at 20:40:18 UTC Thu May 8 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R3
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          no ip domain lookup
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          mpls traffic-eng tunnels
+          !
+          !
+          !
+          key chain ISIS-BFD-KEY
+           key 100
+            key-string BFDPASS
+            cryptographic-algorithm hmac-sha-1
+          !
+          !
+          !
+          redundancy
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 1000 min-rx 1000 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           ip address 3.3.3.3 255.255.255.255
+           ip router isis CORE
+           isis circuit-type level-2-only
+          !
+          interface Tunnel21
+           description TASK-2-NP
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 5.5.5.5
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 200000
+           tunnel mpls traffic-eng affinity 0x0 mask 0x0
+           tunnel mpls traffic-eng path-option 10 explicit name TASK-3-NP
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           no routing dynamic
+          !
+          interface GigabitEthernet0/0
+           ip address 172.16.13.3 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0x11000000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/1
+           ip address 172.16.23.3 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng backup-path Tunnel21
+           mpls traffic-eng administrative-weight 2
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/2
+           ip address 172.16.35.3 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0x11000000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/3
+           ip address 172.16.34.3 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0x1000000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0003.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ip explicit-path name TASK-2-NP enable
+           next-address 5.5.5.5
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: R3
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: -120
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 5977 bytes
+          !
+          ! Last configuration change at 20:40:08 UTC Thu May 8 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R6
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          no ip domain lookup
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          mpls traffic-eng tunnels
+          !
+          !
+          !
+          key chain ISIS-BFD-KEY
+           key 100
+            key-string BFDPASS
+            cryptographic-algorithm hmac-sha-1
+          !
+          !
+          !
+          redundancy
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 1000 min-rx 1000 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           ip address 6.6.6.6 255.255.255.255
+           ip router isis CORE
+           isis circuit-type level-2-only
+          !
+          interface Loopback10
+           ip address 10.6.1.6 255.255.255.0
+          !
+          interface Loopback20
+           ip address 10.6.2.6 255.255.255.0
+          !
+          interface Tunnel10
+           description TASK-1
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 4.4.4.4
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng exp-bundle master
+           tunnel mpls traffic-eng exp-bundle member Tunnel11
+           tunnel mpls traffic-eng exp-bundle member Tunnel12
+           tunnel mpls traffic-eng exp-bundle member Tunnel13
+           no routing dynamic
+          !
+          interface Tunnel11
+           description TASK-1
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 4.4.4.4
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x0 mask 0xF00000
+           tunnel mpls traffic-eng path-option 1000 dynamic
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           tunnel mpls traffic-eng exp 5 6 7
+           no routing dynamic
+          !
+          interface Tunnel12
+           description TASK-1
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 4.4.4.4
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x0 mask 0x0
+           tunnel mpls traffic-eng path-option 1000 dynamic
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           tunnel mpls traffic-eng exp 0 1 2
+           no routing dynamic
+          !
+          interface Tunnel13
+           description TASK-1
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 4.4.4.4
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x1000000 mask 0xF000000
+           tunnel mpls traffic-eng path-option 1000 dynamic
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           tunnel mpls traffic-eng exp 3 4
+           no routing dynamic
+          !
+          interface GigabitEthernet0/0
+           ip address 172.16.56.6 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0x1000000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/1
+           ip address 10.6.0.6 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           ip address 172.16.67.6 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0006.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           redistribute connected
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: R6
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -280
+    y: 80
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 5505 bytes
+          !
+          ! Last configuration change at 20:40:18 UTC Thu May 8 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R7
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          no ip domain lookup
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          mpls traffic-eng tunnels
+          !
+          !
+          !
+          key chain ISIS-BFD-KEY
+           key 100
+            key-string BFDPASS
+            cryptographic-algorithm hmac-sha-1
+          !
+          !
+          !
+          redundancy
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 1000 min-rx 1000 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           ip address 7.7.7.7 255.255.255.255
+           ip router isis CORE
+           isis circuit-type level-2-only
+          !
+          interface Loopback10
+           ip address 10.7.1.7 255.255.255.0
+          !
+          interface Loopback20
+           ip address 10.7.2.7 255.255.255.0
+          !
+          interface Tunnel30
+           description TASK-3
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 1.1.1.1
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x0 mask 0x0
+           tunnel mpls traffic-eng path-option 10 explicit name TASK-3
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           tunnel mpls traffic-eng fast-reroute node-protect
+           no routing dynamic
+          !
+          interface Tunnel31
+           description TASK-3-LP
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 5.5.5.5
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 200000
+           tunnel mpls traffic-eng affinity 0x0 mask 0x0
+           tunnel mpls traffic-eng path-option 10 explicit name TASK-3-LP
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           no routing dynamic
+          !
+          interface GigabitEthernet0/0
+           ip address 172.16.47.7 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0xF00000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/1
+           ip address 172.16.57.7 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng backup-path Tunnel31
+           mpls traffic-eng attribute-flags 0x11000000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/2
+           ip address 172.16.67.7 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/3
+           ip address 10.7.0.7 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0007.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           redistribute connected
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ip explicit-path name TASK-3 enable
+           next-address loose 5.5.5.5
+           next-address loose 3.3.3.3
+           next-address 1.1.1.1
+          !
+          ip explicit-path name TASK-3-LP enable
+           next-address 6.6.6.6
+           next-address 5.5.5.5
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^CC
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^CC
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^CC
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: R7
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: 160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 6776 bytes
+          !
+          ! Last configuration change at 20:40:12 UTC Thu May 8 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R4
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          no ip domain lookup
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          mpls traffic-eng tunnels
+          !
+          !
+          !
+          key chain ISIS-BFD-KEY
+           key 100
+            key-string BFDPASS
+            cryptographic-algorithm hmac-sha-1
+          !
+          !
+          !
+          redundancy
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 1000 min-rx 1000 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           ip address 4.4.4.4 255.255.255.255
+           ip router isis CORE
+           isis circuit-type level-2-only
+          !
+          interface Loopback10
+           ip address 10.4.1.4 255.255.255.0
+          !
+          interface Loopback20
+           ip address 10.4.2.4 255.255.255.0
+          !
+          interface Tunnel10
+           description TASK-1
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 6.6.6.6
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng exp-bundle master
+           tunnel mpls traffic-eng exp-bundle member Tunnel11
+           tunnel mpls traffic-eng exp-bundle member Tunnel12
+           tunnel mpls traffic-eng exp-bundle member Tunnel13
+           no routing dynamic
+          !
+          interface Tunnel11
+           description TASK-1
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 6.6.6.6
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x0 mask 0xF00000
+           tunnel mpls traffic-eng path-option 1000 dynamic
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           tunnel mpls traffic-eng exp 5 6 7
+           no routing dynamic
+          !
+          interface Tunnel12
+           description TASK-1
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 6.6.6.6
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x0 mask 0x0
+           tunnel mpls traffic-eng path-option 1000 dynamic
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           tunnel mpls traffic-eng exp 0 1 2
+           no routing dynamic
+          !
+          interface Tunnel13
+           description TASK-1
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 6.6.6.6
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x1000000 mask 0xF000000
+           tunnel mpls traffic-eng path-option 1000 dynamic
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           tunnel mpls traffic-eng exp 3 4
+           no routing dynamic
+          !
+          interface Tunnel60
+           description TASK-6
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 2.2.2.2
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x0 mask 0x0
+           tunnel mpls traffic-eng path-option 1000 dynamic
+           tunnel mpls traffic-eng path-selection metric te
+           no routing dynamic
+          !
+          interface GigabitEthernet0/0
+           ip address 172.16.47.4 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0xF00000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/1
+           ip address 10.4.0.4 255.255.255.0
+           ip policy route-map TASK-6
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           ip address 172.16.14.4 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0xF00000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/3
+           ip address 172.16.34.4 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0x1000000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0004.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           redistribute connected
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ip access-list extended TASK-6
+           permit ip any 10.2.0.0 0.0.0.255
+          !
+          ipv6 ioam timestamp
+          !
+          route-map TASK-6 permit 10
+           match ip address TASK-6
+           set interface Tunnel60
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^CC
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^CC
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^CC
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: R4
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 200
+    y: -120
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 4425 bytes
+          !
+          ! Last configuration change at 20:40:09 UTC Thu May 8 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R5
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          no ip domain lookup
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          mpls traffic-eng tunnels
+          !
+          !
+          !
+          key chain ISIS-BFD-KEY
+           key 100
+            key-string BFDPASS
+            cryptographic-algorithm hmac-sha-1
+          !
+          !
+          !
+          redundancy
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 1000 min-rx 1000 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           ip address 5.5.5.5 255.255.255.255
+           ip router isis CORE
+           isis circuit-type level-2-only
+          !
+          interface GigabitEthernet0/0
+           ip address 172.16.56.5 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0x1000000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/1
+           ip address 172.16.57.5 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0x11000000
+           mpls traffic-eng administrative-weight 2
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/2
+           ip address 172.16.35.5 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0x11000000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/3
+           ip address 172.16.25.5 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0005.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: R5
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -81
+    y: 2
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 4613 bytes
+          !
+          ! Last configuration change at 20:40:27 UTC Thu May 8 2025
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R1
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          no ip domain lookup
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          mpls traffic-eng tunnels
+          !
+          !
+          !
+          key chain ISIS-BFD-KEY
+           key 100
+            key-string BFDPASS
+            cryptographic-algorithm hmac-sha-1
+          !
+          !
+          !
+          redundancy
+          bfd-template single-hop ISIS-BFD
+           interval min-tx 1000 min-rx 1000 multiplier 3
+           authentication sha-1 keychain ISIS-BFD-KEY
+           echo
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           ip address 1.1.1.1 255.255.255.255
+           ip router isis CORE
+           isis circuit-type level-2-only
+          !
+          interface Loopback10
+           ip address 10.1.1.1 255.255.255.0
+          !
+          interface Loopback20
+           ip address 10.1.2.1 255.255.255.0
+          !
+          interface Tunnel20
+           description TASK-2
+           ip unnumbered Loopback0
+           tunnel mode mpls traffic-eng
+           tunnel destination 7.7.7.7
+           tunnel mpls traffic-eng autoroute announce
+           tunnel mpls traffic-eng priority 3 3
+           tunnel mpls traffic-eng bandwidth 100000
+           tunnel mpls traffic-eng affinity 0x0 mask 0xF00000
+           tunnel mpls traffic-eng path-option 1000 dynamic
+           tunnel mpls traffic-eng record-route
+           tunnel mpls traffic-eng path-selection metric te
+           no routing dynamic
+          !
+          interface GigabitEthernet0/0
+           ip address 172.16.13.1 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0x11000000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/1
+           ip address 10.1.0.1 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           ip address 172.16.14.1 255.255.255.0
+           ip router isis CORE
+           duplex auto
+           speed auto
+           media-type rj45
+           mpls traffic-eng tunnels
+           mpls traffic-eng attribute-flags 0xF00000
+           bfd template ISIS-BFD
+           isis circuit-type level-2-only
+           isis bfd
+           ip rsvp bandwidth percent 80 percent 20
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          router isis CORE
+           mpls traffic-eng router-id Loopback0
+           mpls traffic-eng level-2
+           net 49.0000.0000.0000.0001.00
+           is-type level-2-only
+           router-id Loopback0
+           domain-password MPLS-CORE
+           metric-style wide
+           log-adjacency-changes
+           redistribute connected
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: R1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -72
+    y: -317
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname PC1
+
+          int g0/1
+           ip add 10.1.0.10 255.255.255.0
+           no sh
+
+          ip route 0.0.0.0 0.0.0.0 10.1.0.1
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: PC1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -195
+    y: -316
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname PC2
+
+          int g0/0
+           ip add 10.2.0.20 255.255.255.0
+           no sh
+
+          ip route 0.0.0.0 0.0.0.0 10.2.0.2
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: PC2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -362
+    y: -159
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname PC6
+
+          int g0/1
+           ip add 10.6.0.60 255.255.255.0
+           no sh
+
+          ip route 0.0.0.0 0.0.0.0 10.6.0.6
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: null
+    label: PC6
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -401
+    y: 79
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname PC4
+
+          int g0/1
+           ip add 10.4.0.40 255.255.255.0
+           no sh
+
+          ip route 0.0.0.0 0.0.0.0 10.4.0.4
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n10
+    image_definition: null
+    label: PC4
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 322
+    y: -121
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname PC1
+
+          int g0/3
+           ip add 10.7.0.70 255.255.255.0
+           no sh
+
+          ip route 0.0.0.0 0.0.0.0 10.7.0.7
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n11
+    image_definition: null
+    label: PC7
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 122
+    y: 161
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+links:
+  - id: l0
+    n1: n2
+    n2: n5
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: iosv-2-GigabitEthernet0/0<->iosv-5-GigabitEthernet0/0
+  - id: l1
+    n1: n3
+    n2: n5
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: iosv-3-GigabitEthernet0/1<->iosv-5-GigabitEthernet0/1
+  - id: l2
+    n1: n3
+    n2: n4
+    i1: i1
+    i2: i1
+    conditioning:
+      latency: 50
+      enabled: true
+    label: iosv-3-GigabitEthernet0/0<->iosv-4-GigabitEthernet0/0
+  - id: l3
+    n1: n3
+    n2: n2
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: iosv-3-GigabitEthernet0/2<->iosv-2-GigabitEthernet0/2
+  - id: l4
+    n1: n1
+    n2: n6
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: iosv-1-GigabitEthernet0/0<->iosv-6-GigabitEthernet0/0
+  - id: l5
+    n1: n1
+    n2: n0
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: iosv-1-GigabitEthernet0/1<->iosv-0-GigabitEthernet0/1
+  - id: l6
+    n1: n1
+    n2: n5
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: iosv-1-GigabitEthernet0/2<->iosv-5-GigabitEthernet0/2
+  - id: l7
+    n1: n5
+    n2: n0
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: iosv-5-GigabitEthernet0/3<->iosv-0-GigabitEthernet0/3
+  - id: l8
+    n1: n1
+    n2: n4
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: iosv-1-GigabitEthernet0/3<->iosv-4-GigabitEthernet0/3
+  - id: l9
+    n1: n6
+    n2: n4
+    i1: i3
+    i2: i3
+    conditioning:
+      latency: 50
+      enabled: true
+    label: R1-GigabitEthernet0/2<->R4-GigabitEthernet0/2
+  - id: l10
+    n1: n7
+    n2: n6
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: PC1-GigabitEthernet0/1<->R1-GigabitEthernet0/1
+  - id: l11
+    n1: n8
+    n2: n0
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: PC2-GigabitEthernet0/0<->R2-GigabitEthernet0/0
+  - id: l12
+    n1: n9
+    n2: n2
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: PC1_1-GigabitEthernet0/1<->R6-GigabitEthernet0/1
+  - id: l13
+    n1: n11
+    n2: n3
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: PC1_3-GigabitEthernet0/3<->R7-GigabitEthernet0/3
+  - id: l14
+    n1: n10
+    n2: n4
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: PC4-GigabitEthernet0/1<->R4-GigabitEthernet0/1
+lab:
+  description: |
+    IS-IS + BFD
+    MPLS TE + Path Protection + FRR + CBTS
+    RSVP + BFD
+  notes: ''
+  title: MPLS Traffic Engineering 2 solution
+  version: 0.2.2
