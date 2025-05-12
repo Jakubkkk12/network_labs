@@ -30,7 +30,7 @@ Your tasks include configuring multiple **MPLS-TE tunnels** based on complex cri
 
 You must also configure **link affinities and metrics** according to the following topology rules:
 
-- **Affinity 0x1100000 (GOLD – includes SILVER):**
+- **Affinity 0x11000000 (GOLD – includes SILVER):**
   - R1↔R3  
   - R3↔R5  
   - R5↔R7  

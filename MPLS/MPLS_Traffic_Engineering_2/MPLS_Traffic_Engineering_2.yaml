@@ -404,7 +404,7 @@ annotations:
     text_bold: false
     text_content: |-
       Topology considerations:
-      1) Connections between (affinity 0x1100000)
+      1) Connections between (affinity 0x11000000)
          R1<->R3
          R3<->R5
          R5<->R7
