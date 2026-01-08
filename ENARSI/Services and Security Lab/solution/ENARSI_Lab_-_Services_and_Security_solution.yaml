@@ -1,0 +1,1420 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      IPv4: 10.X.Y.R/24, X<Y
+      IPv6: 3000:10:X:Y::R/64
+      IPv4 Lo: 192.168.255.R/32
+      IPv6 Lo: 3000:192:168:255::R/128
+      SERVER1: 172.16.16.1/32
+               3000:172:16:16::1/128
+      SERVER2: 172.16.17.1/32
+               3000:172:16:17::1/128
+      DHCP-CLIENT1: SLAAC
+      DHCP-CLIENT2: Stateless DHCPV6
+      DHCP-CLIENT3: Stateful DHCPV6
+    text_font: monospace
+    text_italic: false
+    text_size: 15
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -640.0
+    y1: -320.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.0.10.10/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -560.0
+    y1: 40.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.0.20.10/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -560.0
+    y1: 200.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.1.10.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -200.0
+    y1: 440.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.1.20.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -40.0
+    y1: 440.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.1.30.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 80.0
+    y1: 320.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 34
+    text_bold: false
+    text_content: 10.0.11.10/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -525.8918006680906
+    y1: 110.78706907517739
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Tasks DHCPv4:
+      On SERVER1 (172.16.16.1)
+      Exclude IP from .1 to .10
+      Use lease time 3min
+      Use Cisco as domain-name
+      Configure correct default gateway, dns
+      DHCP-CLIENT1 must use client-id "PC1" and obtain 10.1.10.250
+      DHCP-CLIENT2 must obtain IPv4 address of TFTP server 172.16.16.1
+
+      Tasks DHCPv6:
+      On SERVER2 (3000:172:16:17::1)
+      Create Pool for DHCP-CLIENT2 (stateless) - SNTP IPv6 is 3000:172:16:17::1
+      Create Pool for DHCP-CLIENT3 (stateful)
+      DNS IPv6 is 3000:172:16:16::1
+
+      Tasks NetFlow:
+      On DHCP-CLIENT2 configure in old way NetFlow (use best practice) (v9) on interface e0/0 inbound NetFlow IPv4 172.16.16.1 port 6700
+      On R2 configure Flexible NetFlow (v9) on G1 inbound (IPv4 and IPv6)
+      Record what you want, use sampler. Tune communication with NetFlow Collector (dscp, ...)
+      NetFlow IPv4 172.16.16.1 port 6700, NetFlow IPv6 3000:172:16:16::1 port 6701
+
+      Tasks SNMP:
+      On R1 configure SNMPv2c (IPv4 172.16.16.1) and SNMPv3 (IPv6 3000:172:16:17::1)
+      Community/AuthPriv key is "Cisco"
+      Use ACL to restrict access SNMPv2c
+
+      Tasks ACLs
+      Apply ACL (IPv4 and IPv6) on G1 which will allow only OSPFv2 and OSPFv3 communication from 8AM to 2PM
+      Else permit all
+
+      Tasks uRPF:
+      On R3 use uRPF strict (IPv4 and IPv6) on all interfaces
+      Change it to loos for G3 (IPv6)
+
+      Tasks PBR + IP SLA + Tracking:
+      On R3 (int G3, G4) use PBR to redirect traffic destinated to SNMP IPv4 172.16.16.1 from 192.168.255.0/24 to use int G2 (use tracking to validate reachability)
+      Emulate SNMP traffic on R1 using IP SLA
+      On R2 int G5 use PBR to redirect traffic destinated to SNMP IPv6 3000:172:16:17::1 from 3000:192:168:255::/64 to use int G3
+
+      Tasks AAA+VTY:
+      On R5 configure AAA for authentication, authorization and accounting (exec + commands level 15) use custom name "MY-AAA-VTY".
+      RADIUS (IPv4 172.16.17.1 and IPv6 3000:172:16:17::1, password: "RAD") > TACACS (IPv4 172.16.16.1 and IPv6 3000:172:16:16::1, password "TAC", port 49)
+      Use the local database in AAA default (authentication, authorization)
+      Local user "admin" (priv 15) password "admin"
+      Apply MY-AAA-VTY to 1-3 VTY Line (only SSHv2)
+
+      Tasks CoPP:
+      On R4 configure CoPP to limit Telnet (drop), SSH (limit1), HTTP/HTTPS (drop), SNMP (limit2), EIGRP (limit2), OSPF (limit1), BGP (drop) - IPv4 and IPv6
+      The limits configure as you want
+
+      Tasks Logging:
+      Configure Logging and Syslog on both SERVERs
+      Console lev7, monitor lev4, syslog (other SERVER IPv4 and IPv6) lev6
+      Logs must be sync with local time (present on device) contain milliseconds and origin-id as hostname
+      On SERVER2 configure discriminator (to buffered) to exclude logs contain "user" sting in body-message
+    text_font: monospace
+    text_italic: false
+    text_size: 15
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 280.0
+    y1: -360.0
+    z_index: 0
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          service timestamps debug datetime msec
+          service timestamps log datetime msec localtime
+          hostname SERVER1
+          !
+          no logging console
+          logging monitor warnings
+          !
+          no aaa new-model
+          !
+          ip dhcp excluded-address 10.1.10.1 10.1.10.10
+          ip dhcp excluded-address 10.1.20.1 10.1.20.10
+          ip dhcp excluded-address 10.1.30.1 10.1.30.10
+          !
+          ip dhcp pool P10
+           network 10.1.10.0 255.255.255.0
+           domain-name Cisco
+           default-router 10.1.10.2
+           dns-server 10.1.10.2 8.8.8.8
+           lease 0 0 3
+             address 10.1.10.250 client-id "PC1" ascii
+          !
+          ip dhcp pool P20
+           network 10.1.20.0 255.255.255.0
+           domain-name Cisco
+           default-router 10.1.20.1
+           dns-server 10.1.20.1 8.8.8.8
+           option 150 ip 172.16.16.1
+           lease 0 0 3
+          !
+          ip dhcp pool P30
+           network 10.1.30.0 255.255.255.0
+           domain-name Cisco
+           default-router 10.1.30.1
+           dns-server 10.1.30.1 8.8.8.8
+           lease 0 0 3
+          !
+          ipv6 unicast-routing
+          !
+          interface Loopback0
+           ip address 172.16.16.1 255.255.255.255
+           ipv6 address 3000:172:16:16::1/128
+           ospfv3 network point-to-point
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet1
+           ip address 10.0.10.10 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:0:10::10/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet3
+           ip address 10.0.11.10 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:0:11::10/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          router ospfv3 1
+           !
+           address-family ipv4 unicast
+           exit-address-family
+           !
+           address-family ipv6 unicast
+           exit-address-family
+          !
+          ip sla responder
+          logging origin-id hostname
+          logging host 172.16.17.1
+          logging host ipv6 3000:172:16:17::1
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: SERVER1
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -600
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname R3
+          !
+          ipv6 unicast-routing
+          !
+          track 1 ip sla 1 state
+           delay up 2
+          !
+          interface Loopback0
+           ip address 192.168.255.3 255.255.255.255
+           ipv6 address 3000:192:168:255::3/128
+           ospfv3 network point-to-point
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet2
+           ip address 10.3.5.3 255.255.255.0
+           ip verify unicast source reachable-via rx
+           negotiation auto
+           ipv6 address 3000:10:3:5::3/64
+           ipv6 verify unicast source reachable-via rx
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet3
+           ip address 10.2.3.3 255.255.255.0
+           ip verify unicast source reachable-via rx
+           ip policy route-map PBR-G3-G4-SNMP
+           negotiation auto
+           ipv6 address 3000:10:2:3::3/64
+           ipv6 verify unicast source reachable-via any
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet4
+           ip address 10.1.3.3 255.255.255.0
+           ip verify unicast source reachable-via rx
+           ip policy route-map PBR-G3-G4-SNMP
+           negotiation auto
+           ipv6 address 3000:10:1:3::3/64
+           ipv6 verify unicast source reachable-via rx
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet5
+           ip address 10.3.4.3 255.255.255.0
+           ip verify unicast source reachable-via rx
+           negotiation auto
+           ipv6 address 3000:10:3:4::3/64
+           ipv6 verify unicast source reachable-via rx
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          router ospfv3 1
+           !
+           address-family ipv4 unicast
+           exit-address-family
+           !
+           address-family ipv6 unicast
+           exit-address-family
+          !
+          ip access-list extended SNMP-TRAFFIC
+           10 permit udp 192.168.255.0 0.0.0.255 host 172.16.16.1 eq snmp
+           20 permit udp 192.168.255.0 0.0.0.255 eq snmptrap host 172.16.16.1
+          ip access-list extended TO-LOC-PBR-IP-SLA-1
+           10 permit icmp host 192.168.255.3 host 172.16.16.1 echo
+          !
+          ip sla 1
+           icmp-echo 172.16.16.1 source-interface Loopback0
+            threshold 1000
+            timeout 2000
+            frequency 30
+          ip sla schedule 1 life forever start-time now
+          !
+          route-map LOC-PBR permit 10
+           match ip address TO-LOC-PBR-IP-SLA-1
+           set ip next-hop 10.3.5.5
+          !
+          route-map PBR-G3-G4-SNMP permit 10
+           match ip address SNMP-TRAFFIC
+           set ip next-hop verify-availability 10.3.5.5 1 track 1
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: R3
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -160
+    y: 120
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname R1
+          !
+          ipv6 unicast-routing
+          !
+          interface Loopback0
+           ip address 192.168.255.1 255.255.255.255
+           ipv6 address 3000:192:168:255::1/128
+           ospfv3 network point-to-point
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet1
+           ip address 10.1.20.1 255.255.255.0
+           ip helper-address 172.16.16.1
+           negotiation auto
+           ipv6 address 3000:10:1:20::1/64
+           ipv6 nd other-config-flag
+           ipv6 dhcp relay destination 3000:172:16:17::1
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet2
+           ip address 10.1.30.1 255.255.255.0
+           ip helper-address 172.16.16.1
+           negotiation auto
+           ipv6 address 3000:10:1:30::1/64
+           ipv6 dhcp relay destination 3000:172:16:17::1
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet4
+           ip address 10.1.3.1 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:1:3::1/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet5
+           ip address 10.1.2.1 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:1:2::1/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          router ospfv3 1
+           !
+           address-family ipv4 unicast
+           exit-address-family
+           !
+           address-family ipv6 unicast
+           exit-address-family
+          !
+          ip access-list standard RESTRICT-SNMP-IPv4
+           10 permit 172.16.16.1
+          !
+          ip sla 1
+           udp-echo 172.16.16.1 161 source-ip 192.168.255.1
+            frequency 20
+          ip sla schedule 1 life forever start-time now
+          !
+          snmp-server engineID local 1234567890
+          snmp-server group G v3 priv write W
+          snmp-server view V system.7 included
+          snmp-server community Cisco RW RESTRICT-SNMP-IPv4
+          snmp-server enable traps cpu threshold
+          snmp-server host 172.16.16.1 informs version 2c Cisco
+          snmp-server host 3000:172:16:17::1 informs version 3 priv U
+          snmp ifmib ifindex persist
+          snmp mib community-map Cisco engineid 80000009030052540071C1E0
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: R1
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname R2
+          !
+          ipv6 unicast-routing
+          !
+          flow record Rv4
+           match ipv4 destination address
+           match ipv4 source address
+           match ipv4 dscp
+           collect counter packets
+           collect ipv4 protocol
+          !
+          flow record Rv6
+           match ipv6 destination address
+           match ipv6 source address
+           match ipv6 dscp
+           collect counter packets
+           collect ipv6 protocol
+          !
+          flow exporter Ev4
+           destination 172.16.16.1
+           source Loopback0
+           dscp 41
+           ttl 16
+           mtu 1400
+           transport udp 6700
+          !
+          flow exporter Ev6
+           destination 3000:172:16:16::1
+           source Loopback0
+           dscp 41
+           ttl 16
+           mtu 1400
+           transport udp 6701
+          !
+          flow monitor Mv4
+           exporter Ev4
+           cache type immediate
+           statistics packet protocol
+           statistics packet size
+           record Rv4
+          !
+          flow monitor Mv6
+           exporter Ev6
+           cache type immediate
+           statistics packet protocol
+           statistics packet size
+           record Rv6
+          !
+          sampler S
+           mode deterministic 1 out-of 2
+          !
+          interface Loopback0
+           ip address 192.168.255.2 255.255.255.255
+           ipv6 address 3000:192:168:255::2/128
+           ospfv3 network point-to-point
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet1
+           ip flow monitor Mv4 sampler S input
+           ip address 10.1.10.2 255.255.255.0
+           ip helper-address 172.16.16.1
+           negotiation auto
+           ipv6 flow monitor Mv6 sampler S input
+           ipv6 address 3000:10:1:10::2/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet2
+           ip address 10.2.4.2 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:2:4::2/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet3
+           ip address 10.2.3.2 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:2:3::2/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet5
+           ip address 10.1.2.2 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:1:2::2/64
+           ipv6 policy route-map PBR-G5
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          router ospfv3 1
+           !
+           address-family ipv4 unicast
+           exit-address-family
+           !
+           address-family ipv6 unicast
+           exit-address-family
+          !
+          route-map PBR-G5 permit 10
+           match ipv6 address SNMP-TRFFIC-IPv6
+           set ipv6 next-hop 3000:10:2:3::3
+          !
+          ipv6 access-list SNMP-TRFFIC-IPv6
+           sequence 20 permit udp 3000:192:168:255::/64 host 3000:172:16:17::1 eq snmp
+           sequence 30 permit udp 3000:192:168:255::/64 eq snmptrap host 3000:172:16:17::1
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: R2
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -160
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname R5
+          !
+          aaa new-model
+          !
+          aaa authentication login default local
+          aaa authentication login MY-AAA-VTY group radius group tacacs+
+          aaa authorization exec default local
+          aaa authorization exec MY-AAA-VTY group radius group tacacs+
+          aaa authorization commands 15 default local
+          aaa authorization commands 15 MY-AAA-VTY group radius group tacacs+
+          aaa accounting commands 15 MY-AAA-VTY start-stop group radius group tacacs+
+          !
+          aaa session-id common
+          !
+          ip domain name Cisco
+          !
+          ipv6 unicast-routing
+          !
+          username admin privilege 15 password 0 admin
+          !
+          interface Loopback0
+           ip address 192.168.255.5 255.255.255.255
+           ipv6 address 3000:192:168:255::5/128
+           ospfv3 network point-to-point
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet1
+           ip address 10.0.10.5 255.255.255.0
+           ip access-group TASK-IPv4 in
+           ip access-group TASK-IPv4 out
+           negotiation auto
+           ipv6 address 3000:10:0:10::5/64
+           ipv6 traffic-filter TASK-IPv6 in
+           ipv6 traffic-filter TASK-IPv6 out
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet2
+           ip address 10.3.5.5 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:3:5::5/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          router ospfv3 1
+           !
+           address-family ipv4 unicast
+           exit-address-family
+           !
+           address-family ipv6 unicast
+           exit-address-family
+          !
+          ip ssh version 2
+          !
+          ip access-list extended FOR-IP-SLA-1-R3
+           10 permit icmp host 192.168.255.3 host 172.16.16.1
+          ip access-list extended TASK-IPv4
+           10 permit ospf any any time-range T-R
+           20 deny   ospf any any
+           30 permit ip any any
+          !
+          tacacs server TACACS-S-1-IPv4
+           address ipv4 172.16.16.1
+           key TAC
+          tacacs server TACACS-S-1-IPv6
+           address ipv6 3000:172:16:16::1
+           key TAC
+          !
+          radius server RAD-S-1-IPv4
+           address ipv4 172.16.17.1 auth-port 1812 acct-port 1813
+           key RAD
+          !
+          radius server RAD-S-1-IPv6
+           address ipv6 3000:172:16:17::1 auth-port 1812 acct-port 1813
+           key RAD
+          !
+          ipv6 access-list TASK-IPv6
+           sequence 10 permit 89 any any time-range T-R
+           sequence 20 deny 89 any any
+           sequence 30 permit ipv6 any any
+          !
+          line con 0
+           exec-timeout 0 0
+           stopbits 1
+          line vty 0 3
+           exec-timeout 0 0
+           login authentication MY-AAA-VTY
+           transport input ssh
+          line vty 4
+           exec-timeout 0 0
+           transport input ssh
+          !
+          time-range T-R
+           periodic daily 8:00 to 14:00
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: R5
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -360
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname R4
+          !
+          ipv6 unicast-routing
+          !
+          class-map match-any COPP-TO-LIMIT-L2
+           match access-group name COPP-TO-LIMIT-L2-IPv4
+           match access-group name COPP-TO-LIMIT-L2-IPv6
+          class-map match-any COPP-TO-LIMIT-L1
+           match access-group name COPP-TO-LIMIT-L1-IPv4
+           match access-group name COPP-TO-LIMIT-L1-IPv6
+          class-map match-any COPP-TO-DROP
+           match access-group name COPP-TO-DROP-IPv4
+           match access-group name COPP-TO-DROP-IPv6
+          !
+          policy-map COPP
+           class COPP-TO-DROP
+            police 8000 conform-action drop
+           class COPP-TO-LIMIT-L1
+            police cir 5000000 pir 10000000 conform-action transmit  exceed-action transmit  violate-action drop
+           class COPP-TO-LIMIT-L2
+            police cir 1000000 pir 2000000 conform-action transmit  exceed-action transmit  violate-action drop
+           class class-default
+          !
+          interface Loopback0
+           ip address 192.168.255.4 255.255.255.255
+           ipv6 address 3000:192:168:255::4/128
+           ospfv3 network point-to-point
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet1
+           ip address 10.0.20.4 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:0:20::4/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet2
+           ip address 10.2.4.4 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:2:4::4/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet3
+           ip address 10.0.11.4 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:0:11::4/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          interface GigabitEthernet5
+           ip address 10.3.4.4 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:3:4::4/64
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          router ospfv3 1
+           !
+           address-family ipv4 unicast
+           exit-address-family
+           !
+           address-family ipv6 unicast
+           exit-address-family
+          !
+          ip access-list extended COPP-TO-DROP-IPv4
+           10 permit tcp any any eq telnet
+           20 permit tcp any any eq www
+           30 permit tcp any any eq 443
+           40 permit tcp any any eq bgp
+           50 permit tcp any eq bgp any
+          ip access-list extended COPP-TO-LIMIT-L1-IPv4
+           10 permit ospf any any
+           20 permit tcp any any eq 22
+          ip access-list extended COPP-TO-LIMIT-L2-IPv4
+           10 permit eigrp any any
+           20 permit udp any any eq snmp
+           30 permit udp any any eq snmptrap
+           40 permit udp any eq snmptrap any
+           50 permit udp any eq snmp any
+          !
+          ipv6 access-list COPP-TO-DROP-IPv6
+           sequence 10 permit tcp any any eq telnet
+           sequence 20 permit tcp any any eq www
+           sequence 30 permit tcp any any eq 443
+           sequence 40 permit tcp any any eq bgp
+           sequence 50 permit tcp any eq bgp any
+          !
+          ipv6 access-list COPP-TO-LIMIT-L1-IPv6
+           sequence 10 permit tcp any any eq 22
+           sequence 20 permit 89 any any
+          !
+          ipv6 access-list COPP-TO-LIMIT-L2-IPv6
+           sequence 10 permit udp any any eq snmp
+           sequence 20 permit udp any any eq snmptrap
+           sequence 30 permit udp any eq snmptrap any
+           sequence 40 permit udp any eq snmp any
+           sequence 50 permit 88 any any
+          !
+          control-plane
+           service-policy input COPP
+           service-policy output COPP
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: R4
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -360
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname DHCP-CLIENT3
+          !
+          ipv6 unicast-routing
+          !
+          interface Ethernet0/0
+           ip address dhcp
+           ipv6 address dhcp
+           ipv6 enable
+           no sh
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: DHCP-CLIENT3
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: 200
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname DHCP-CLIENT2
+          !
+          ipv6 unicast-routing
+          !
+          interface Ethernet0/0
+           ip flow ingress
+           ip address dhcp
+           ipv6 dhcp client request vendor
+           ipv6 address autoconfig default
+           ipv6 enable
+           no sh
+          !
+          ip flow-export source Ethernet0/0
+          ip flow-export version 9
+          ip flow-export destination 172.16.16.1 6700
+          ip flow-top-talkers
+           top 10
+           sort-by packets
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: DHCP-CLIENT2
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: 480
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname DHCP-CLIENT1
+          !
+          ipv6 unicast-routing
+          !
+          interface Ethernet0/0
+           ip dhcp client client-id ascii PC1
+           ip address dhcp
+           ipv6 address autoconfig default
+           ipv6 enable
+           no sh
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: DHCP-CLIENT1
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: -160
+    y: 480
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |2-
+
+          service timestamps debug datetime msec
+          service timestamps log datetime msec localtime
+          hostname SERVER2
+          !
+          logging discriminator NO-USER msg-body drops user
+          logging buffered discriminator NO-USER
+          no logging console
+          logging monitor warnings
+          !
+          no aaa new-model
+          !
+          ipv6 unicast-routing
+          ipv6 dhcp pool P20
+           dns-server 3000:172:16:16::1
+           sntp address 3000:172:16:17::1
+          !
+          ipv6 dhcp pool P30
+           address prefix 3000:10:1:30::/64
+           dns-server 3000:172:16:16::1
+          !
+          interface Loopback0
+           ip address 172.16.17.1 255.255.255.255
+           ipv6 address 3000:172:16:17::1/128
+           ospfv3 network point-to-point
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet1
+           ip address 10.0.20.10 255.255.255.0
+           negotiation auto
+           ipv6 address 3000:10:0:20::10/64
+           ipv6 dhcp server P30
+           ospfv3 1 ipv6 area 0
+           ospfv3 1 ipv4 area 0
+           no mop enabled
+           no mop sysid
+           no sh
+          !
+          router ospfv3 1
+           !
+           address-family ipv4 unicast
+           exit-address-family
+           !
+           address-family ipv6 unicast
+           exit-address-family
+          !
+
+          logging origin-id hostname
+          logging host 172.16.16.1
+          logging host ipv6 3000:172:16:16::1
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: null
+    label: SERVER2
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -600
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+links:
+  - id: l0
+    n1: n0
+    n2: n4
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: SERVER1-GigabitEthernet1<->R5-GigabitEthernet1
+  - id: l1
+    n1: n9
+    n2: n5
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: SERVER2-GigabitEthernet1<->R4-GigabitEthernet1
+  - id: l2
+    n1: n8
+    n2: n3
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: DHCP-CLIENT1-Ethernet0/0<->R2-GigabitEthernet1
+  - id: l3
+    n1: n7
+    n2: n2
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: DHCP-CLIENT2-Ethernet0/0<->R1-GigabitEthernet1
+  - id: l4
+    n1: n6
+    n2: n2
+    i1: i1
+    i2: i2
+    conditioning: {}
+    label: DHCP-CLIENT3-Ethernet0/0<->R1-GigabitEthernet2
+  - id: l5
+    n1: n3
+    n2: n5
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: R2-GigabitEthernet2<->R4-GigabitEthernet2
+  - id: l6
+    n1: n3
+    n2: n1
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: R2-GigabitEthernet3<->R3-GigabitEthernet3
+  - id: l7
+    n1: n2
+    n2: n1
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: R1-GigabitEthernet4<->R3-GigabitEthernet4
+  - id: l8
+    n1: n1
+    n2: n4
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: R3-GigabitEthernet2<->R5-GigabitEthernet2
+  - id: l9
+    n1: n1
+    n2: n5
+    i1: i5
+    i2: i5
+    conditioning: {}
+    label: R3-GigabitEthernet5<->R4-GigabitEthernet5
+  - id: l10
+    n1: n2
+    n2: n3
+    i1: i5
+    i2: i5
+    conditioning: {}
+    label: R1-GigabitEthernet5<->R2-GigabitEthernet5
+  - id: l11
+    n1: n0
+    n2: n5
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: SERVER1-GigabitEthernet3<->R4-GigabitEthernet3
+lab:
+  description: |-
+    IPv4 and IPv6
+    DHCP
+    NetFlow
+    SNMP
+    Access Lists
+    uRPF
+    PBR + IP SLA + Tracking
+    AAA + VTY
+    CoPP
+    Logging
+  notes: ''
+  title: ENARSI Lab - Services and Security_solution
+  version: 0.3.0

@@ -1,0 +1,1007 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      IPv4: 10.X.Y.R/24, X<Y
+      IPv6: 3000:10:X:Y::R/64
+      IPv4 Lo: 192.168.255.R/32
+      IPv6 Lo: 3000:192:168:255::R/128
+      SERVER1: 172.16.16.1/32
+               3000:172:16:16::1/128
+      SERVER2: 172.16.17.1/32
+               3000:172:16:17::1/128
+      DHCP-CLIENT1: SLAAC
+      DHCP-CLIENT2: Stateless DHCPV6
+      DHCP-CLIENT3: Stateful DHCPV6
+    text_font: monospace
+    text_italic: false
+    text_size: 15
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -640.0
+    y1: -320.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.0.10.10/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -560.0
+    y1: 40.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.0.20.10/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -560.0
+    y1: 200.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.1.10.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -200.0
+    y1: 440.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.1.20.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -40.0
+    y1: 440.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: 10.1.30.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 80.0
+    y1: 320.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 34
+    text_bold: false
+    text_content: 10.0.11.10/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -525.8918006680906
+    y1: 110.78706907517739
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Tasks DHCPv4:
+      On SERVER1 (172.16.16.1)
+      Exclude IP from .1 to .10
+      Use lease time 3min
+      Use Cisco as domain-name
+      Configure correct default gateway, dns
+      DHCP-CLIENT1 must use client-id "PC1" and obtain 10.1.10.250
+      DHCP-CLIENT2 must obtain IPv4 address of TFTP server 172.16.16.1
+
+      Tasks DHCPv6:
+      On SERVER2 (3000:172:16:17::1)
+      Create Pool for DHCP-CLIENT2 (stateless) - SNTP IPv6 is 3000:172:16:17::1
+      Create Pool for DHCP-CLIENT3 (stateful)
+      DNS IPv6 is 3000:172:16:16::1
+
+      Tasks NetFlow:
+      On DHCP-CLIENT2 configure in old way NetFlow (use best practice) (v9) on interface e0/0 inbound NetFlow IPv4 172.16.16.1 port 6700
+      On R2 configure Flexible NetFlow (v9) on G1 inbound (IPv4 and IPv6)
+      Record what you want, use sampler. Tune communication with NetFlow Collector (dscp, ...)
+      NetFlow IPv4 172.16.16.1 port 6700, NetFlow IPv6 3000:172:16:16::1 port 6701
+
+      Tasks SNMP:
+      On R1 configure SNMPv2c (IPv4 172.16.16.1) and SNMPv3 (IPv6 3000:172:16:17::1)
+      Community/AuthPriv key is "Cisco"
+      Use ACL to restrict access SNMPv2c
+
+      Tasks ACLs
+      Apply ACL (IPv4 and IPv6) on G1 which will allow only OSPFv2 and OSPFv3 communication from 8AM to 2PM
+      Else permit all
+
+      Tasks uRPF:
+      On R3 use uRPF strict (IPv4 and IPv6) on all interfaces
+      Change it to loos for G3 (IPv6)
+
+      Tasks PBR + IP SLA + Tracking:
+      On R3 (int G3, G4) use PBR to redirect traffic destinated to SNMP IPv4 172.16.16.1 from 192.168.255.0/24 to use int G2 (use tracking to validate reachability)
+      Emulate SNMP traffic on R1 using IP SLA
+      On R2 int G5 use PBR to redirect traffic destinated to SNMP IPv6 3000:172:16:17::1 from 3000:192:168:255::/64 to use int G3
+
+      Tasks AAA+VTY:
+      On R5 configure AAA for authentication, authorization and accounting (exec + commands level 15) use custom name "MY-AAA-VTY".
+      RADIUS (IPv4 172.16.17.1 and IPv6 3000:172:16:17::1, password: "RAD") > TACACS (IPv4 172.16.16.1 and IPv6 3000:172:16:16::1, password "TAC", port 49)
+      Use the local database in AAA default (authentication, authorization)
+      Local user "admin" (priv 15) password "admin"
+      Apply MY-AAA-VTY to 1-3 VTY Line (only SSHv2)
+
+      Tasks CoPP:
+      On R4 configure CoPP to limit Telnet (drop), SSH (limit1), HTTP/HTTPS (drop), SNMP (limit2), EIGRP (limit2), OSPF (limit1), BGP (drop) - IPv4 and IPv6
+      The limits configure as you want
+
+      Tasks Logging:
+      Configure Logging and Syslog on both SERVERs
+      Console lev7, monitor lev4, syslog (other SERVER IPv4 and IPv6) lev6
+      Logs must be sync with local time (present on device) contain milliseconds and origin-id as hostname
+      On SERVER2 configure discriminator (to buffered) to exclude logs contain "user" sting in body-message
+    text_font: monospace
+    text_italic: false
+    text_size: 15
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 280.0
+    y1: -320.0
+    z_index: 0
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname SERVER1
+          ipv6 uni
+
+          router ospfv3 1
+          addr ipv4 uni
+          addr ipv6 uni
+
+          int lo 0
+           ip add 172.16.16.1 255.255.255.255
+           ipv6 add 3000:172:16:16::1/128
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           ospfv3 network point-to-point
+
+          int g1
+           ip add 10.0.10.10 255.255.255.0
+           ipv6 add 3000:10:0:10::10/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g3
+           ip add 10.0.11.10 255.255.255.0
+           ipv6 add 3000:10:0:11::10/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: SERVER1
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -600
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname R3
+          ipv6 uni
+
+          router ospfv3 1
+          addr ipv4 uni
+          addr ipv6 uni
+
+          int lo 0
+           ip add 192.168.255.3 255.255.255.255
+           ipv6 add 3000:192:168:255::3/128
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           ospfv3 network point-to-point
+
+          int g2
+           ip add 10.3.5.3 255.255.255.0
+           ipv6 add 3000:10:3:5::3/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g3
+           ip add 10.2.3.3 255.255.255.0
+           ipv6 add 3000:10:2:3::3/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g4
+           ip add 10.1.3.3 255.255.255.0
+           ipv6 add 3000:10:1:3::3/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g5
+           ip add 10.3.4.3 255.255.255.0
+           ipv6 add 3000:10:3:4::3/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: R3
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -160
+    y: 120
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname R1
+          ipv6 uni
+
+          router ospfv3 1
+          addr ipv4 uni
+          addr ipv6 uni
+
+          int lo 0
+           ip add 192.168.255.1 255.255.255.255
+           ipv6 add 3000:192:168:255::1/128
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           ospfv3 network point-to-point
+
+          int g1
+           ip add 10.1.20.1 255.255.255.0
+           ipv6 add 3000:10:1:20::1/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g2
+           ip add 10.1.30.1 255.255.255.0
+           ipv6 add 3000:10:1:30::1/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g4
+           ip add 10.1.3.1 255.255.255.0
+           ipv6 add 3000:10:1:3::1/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g5
+           ip add 10.1.2.1 255.255.255.0
+           ipv6 add 3000:10:1:2::1/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: R1
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname R2
+          ipv6 uni
+
+          router ospfv3 1
+          addr ipv4 uni
+          addr ipv6 uni
+
+          int lo 0
+           ip add 192.168.255.2 255.255.255.255
+           ipv6 add 3000:192:168:255::2/128
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           ospfv3 network point-to-point
+
+          int g1
+           ip add 10.1.10.2 255.255.255.0
+           ipv6 add 3000:10:1:10::2/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g2
+           ip add 10.2.4.2 255.255.255.0
+           ipv6 add 3000:10:2:4::2/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g3
+           ip add 10.2.3.2 255.255.255.0
+           ipv6 add 3000:10:2:3::2/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g5
+           ip add 10.1.2.2 255.255.255.0
+           ipv6 add 3000:10:1:2::2/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: R2
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -160
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname R5
+          ipv6 uni
+
+          router ospfv3 1
+          addr ipv4 uni
+          addr ipv6 uni
+
+          int lo 0
+           ip add 192.168.255.5 255.255.255.255
+           ipv6 add 3000:192:168:255::5/128
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           ospfv3 network point-to-point
+
+          int g1
+           ip add 10.0.10.5 255.255.255.0
+           ipv6 add 3000:10:0:10::5/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g2
+           ip add 10.3.5.5 255.255.255.0
+           ipv6 add 3000:10:3:5::5/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: R5
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -360
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname R4
+          ipv6 uni
+
+          router ospfv3 1
+          addr ipv4 uni
+          addr ipv6 uni
+
+          int lo 0
+           ip add 192.168.255.4 255.255.255.255
+           ipv6 add 3000:192:168:255::4/128
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           ospfv3 network point-to-point
+
+          int g1
+           ip add 10.0.20.4 255.255.255.0
+           ipv6 add 3000:10:0:20::4/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g3
+           ip add 10.0.11.4 255.255.255.0
+           ipv6 add 3000:10:0:11::4/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g2
+           ip add 10.2.4.4 255.255.255.0
+           ipv6 add 3000:10:2:4::4/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          int g5
+           ip add 10.3.4.4 255.255.255.0
+           ipv6 add 3000:10:3:4::4/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: R4
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -360
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname DHCP-CLIENT3
+          ipv6 uni
+
+          interface range Ethernet 0/0
+           ip address dhcp
+           ipv6 en
+           no shutdown
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: DHCP-CLIENT3
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: 200
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname DHCP-CLIENT2
+          ipv6 uni
+
+          interface range Ethernet 0/0
+           ip address dhcp
+           ipv6 en
+           no shutdown
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: DHCP-CLIENT2
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: 0
+    y: 480
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname DHCP-CLIENT1
+          ipv6 uni
+
+          interface range Ethernet 0/0
+           ip address dhcp
+           ipv6 en
+           no shutdown
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: DHCP-CLIENT1
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: -160
+    y: 480
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname SERVER2
+          ipv6 uni
+
+          router ospfv3 1
+          addr ipv4 uni
+          addr ipv6 uni
+
+          int lo 0
+           ip add 172.16.17.1 255.255.255.255
+           ipv6 add 3000:172:16:17::1/128
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           ospfv3 network point-to-point
+
+          int g1
+           ip add 10.0.20.10 255.255.255.0
+           ipv6 add 3000:10:0:20::10/64
+           ospfv3 1 ipv4 area 0
+           ospfv3 1 ipv6 area 0
+           no sh
+
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: null
+    label: SERVER2
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -600
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+links:
+  - id: l0
+    n1: n0
+    n2: n4
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: SERVER1-GigabitEthernet1<->R5-GigabitEthernet1
+  - id: l1
+    n1: n9
+    n2: n5
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: SERVER2-GigabitEthernet1<->R4-GigabitEthernet1
+  - id: l2
+    n1: n8
+    n2: n3
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: DHCP-CLIENT1-Ethernet0/0<->R2-GigabitEthernet1
+  - id: l3
+    n1: n7
+    n2: n2
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: DHCP-CLIENT2-Ethernet0/0<->R1-GigabitEthernet1
+  - id: l4
+    n1: n6
+    n2: n2
+    i1: i1
+    i2: i2
+    conditioning: {}
+    label: DHCP-CLIENT3-Ethernet0/0<->R1-GigabitEthernet2
+  - id: l5
+    n1: n3
+    n2: n5
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: R2-GigabitEthernet2<->R4-GigabitEthernet2
+  - id: l6
+    n1: n3
+    n2: n1
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: R2-GigabitEthernet3<->R3-GigabitEthernet3
+  - id: l7
+    n1: n2
+    n2: n1
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: R1-GigabitEthernet4<->R3-GigabitEthernet4
+  - id: l8
+    n1: n1
+    n2: n4
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: R3-GigabitEthernet2<->R5-GigabitEthernet2
+  - id: l9
+    n1: n1
+    n2: n5
+    i1: i5
+    i2: i5
+    conditioning: {}
+    label: R3-GigabitEthernet5<->R4-GigabitEthernet5
+  - id: l10
+    n1: n2
+    n2: n3
+    i1: i5
+    i2: i5
+    conditioning: {}
+    label: R1-GigabitEthernet5<->R2-GigabitEthernet5
+  - id: l11
+    n1: n0
+    n2: n5
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: SERVER1-GigabitEthernet3<->R4-GigabitEthernet3
+lab:
+  description: |-
+    IPv4 and IPv6
+    DHCP
+    NetFlow
+    SNMP
+    Access Lists
+    uRPF
+    PBR + IP SLA + Tracking
+    AAA + VTY
+    CoPP
+    Logging
+  notes: ''
+  title: ENARSI Lab - Services and Security
+  version: 0.3.0
