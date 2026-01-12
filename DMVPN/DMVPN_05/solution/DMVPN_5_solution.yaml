@@ -1,0 +1,1218 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      100.0.20.20
+      1234:100:0:20::20
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -400.0
+    y1: 200.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      173.45.21.32
+      1234:173:45:21::32
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 40.0
+    y1: 360.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      150.30.120.34
+      1234:150:30:120::34
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 40.0
+    y1: 40.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Implement IPSec IPv4overIPv6 DMVPN Phase 3 Dual Hub Single Cloud:
+      - Tunnel 100 (tunnel key 100) 192.168.100.0/24
+      - IKEv2 (password PASS)
+      - H1 Primary Hub
+      - Overlay OSPF with BFD
+      - Spokes only default route
+
+      Implement IPSec IPv6overIPv4 DMVPN Phase 3 Dual Hub Dual Cloud:
+      - H1 Tunnel 200 (tunnel key 200) 3000:192:168:200::/64
+      - H2 Tunnel 300 (tunnel key 300) 3000:192:168:300::/64
+      - IKEv2 (password PASS)
+      - Overlay EIGRP with BFD
+      - Spokes only default route
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 520.0
+    y1: 40.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      24.0.200.12
+      1234:24:0:200::12
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 40.0
+    y1: 200.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      35.123.67.3
+      1234:35:123:67::3
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -400.0
+    y1: 40.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      G6:
+      10.0.20.25/24
+      3000:10:0:20::25/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 280.0
+    y1: 160.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      G6:
+      10.0.10.25/24
+      3000:10:0:10::25/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 280.0
+    y1: 0.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      G6:
+      10.0.30.25/24
+      3000:10:0:30::25/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 280.0
+    y1: 320.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      G6:
+      10.100.20.25/24
+      3000:10:100:20::25/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -680.0
+    y1: 160.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      G6:
+      10.100.10.25/24
+      3000:10:100:10::25/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -680.0
+    y1: 0.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      10.100.0.0/24
+      3000:10:100:0::/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -560.0
+    y1: 120.0
+    z_index: 1
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: "Building configuration...\n\nCurrent configuration : 4628 bytes\n\
+          !\n! Last configuration change at 10:58:15 UTC Mon Jan 12 2026\n!\nversion\
+          \ 17.3\nservice timestamps debug datetime msec\nservice timestamps log datetime\
+          \ msec\n! Call-home is enabled by Smart-Licensing.\nservice call-home\n\
+          platform qfp utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+          platform console serial\n!\nhostname H2\n!\nboot-start-marker\nboot-end-marker\n\
+          !\n!\nvrf definition FDOOR-DMVPN\n !\n address-family ipv4\n exit-address-family\n\
+          \ !\n address-family ipv6\n exit-address-family\n!\nno logging console\n\
+          !\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nlogin on-success log\n\
+          ipv6 unicast-routing\n!\n!\n!\n!\n!\n!\n!\nsubscriber templating\n!\n!\n\
+          !\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n!\n!\n!\n!\n!\n!\n\
+          !\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n enrollment pkcs12\n\
+          \ revocation-check crl\n!\n!\ncrypto pki certificate chain SLA-TrustPoint\n\
+          \ certificate ca 01\n  30820321 30820209 A0030201 02020101 300D0609 2A864886\
+          \ F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363 6F312030 1E060355\
+          \ 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31\
+          \ 33303533 30313934\n  3834375A 170D3338 30353330 31393438 34375A30 32310E30\
+          \ 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317 43697363 6F204C69\
+          \ 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101\
+          \ 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6\
+          \ 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A\
+          \ 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3\
+          \ 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7\
+          \ 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3\
+          \ C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F\
+          \ 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4\
+          \ 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B\
+          \ DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F\
+          \ 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D\
+          \ 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648\
+          \ 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0\
+          \ 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB\
+          \ 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646\
+          \ 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC\
+          \ 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86\
+          \ C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229\
+          \ C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A\
+          \ B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE\
+          \ 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi pid CSR1000V\
+          \ sn 9FLLEVQUD2O\ndiagnostic bootup level minimal\nmemory free low-watermark\
+          \ processor 71464\n!\n!\nspanning-tree extend system-id\n!\n!\nredundancy\n\
+          !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+          !\ninterface GigabitEthernet1\n vrf forwarding FDOOR-DMVPN\n ip address\
+          \ 100.0.20.20 255.255.255.0\n negotiation auto\n ipv6 address 1234:100:0:20::20/64\n\
+          \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet2\n no ip address\n\
+          \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+          \ GigabitEthernet3\n ip address 10.100.0.2 255.255.255.0\n negotiation auto\n\
+          \ ipv6 address 3000:10:100::2/64\n no mop enabled\n no mop sysid\n!\ninterface\
+          \ GigabitEthernet4\n no ip address\n shutdown\n negotiation auto\n no mop\
+          \ enabled\n no mop sysid\n!\ninterface GigabitEthernet5\n no ip address\n\
+          \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+          \ GigabitEthernet6\n ip address 10.100.20.25 255.255.255.0\n negotiation\
+          \ auto\n ipv6 address 3000:10:100:20::25/64\n no mop enabled\n no mop sysid\n\
+          !\ninterface GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n\
+          \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n\
+          \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\nip forward-protocol\
+          \ nd\nno ip http server\nip http secure-server\n!\nip route vrf FDOOR-DMVPN\
+          \ 0.0.0.0 0.0.0.0 100.0.20.15\n!\n!\nipv6 route vrf FDOOR-DMVPN ::/0 1234:100:0:20::15\n\
+          !\n!\n!\n!\n!\ncontrol-plane\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout\
+          \ 0 0\n stopbits 1\nline vty 0 4\n exec-timeout 0 0\n login\n transport\
+          \ input ssh\n!\ncall-home\n ! If contact email address in call-home is configured\
+          \ as sch-smart-licensing@cisco.com\n ! the email address configured in Cisco\
+          \ Smart License Portal will be used as contact email address to send SCH\
+          \ notifications.\n contact-email-addr sch-smart-licensing@cisco.com\n profile\
+          \ \"CiscoTAC-1\"\n  active\n  destination transport-method http\n!\n!\n\
+          !\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: H2
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -480
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: "Building configuration...\n\nCurrent configuration : 4630 bytes\n\
+          !\n! Last configuration change at 10:58:14 UTC Mon Jan 12 2026\n!\nversion\
+          \ 17.3\nservice timestamps debug datetime msec\nservice timestamps log datetime\
+          \ msec\n! Call-home is enabled by Smart-Licensing.\nservice call-home\n\
+          platform qfp utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+          platform console serial\n!\nhostname H1\n!\nboot-start-marker\nboot-end-marker\n\
+          !\n!\nvrf definition FDOOR-DMVPN\n !\n address-family ipv4\n exit-address-family\n\
+          \ !\n address-family ipv6\n exit-address-family\n!\nno logging console\n\
+          !\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nlogin on-success log\n\
+          ipv6 unicast-routing\n!\n!\n!\n!\n!\n!\n!\nsubscriber templating\n!\n!\n\
+          !\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n!\n!\n!\n!\n!\n!\n\
+          !\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n enrollment pkcs12\n\
+          \ revocation-check crl\n!\n!\ncrypto pki certificate chain SLA-TrustPoint\n\
+          \ certificate ca 01\n  30820321 30820209 A0030201 02020101 300D0609 2A864886\
+          \ F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363 6F312030 1E060355\
+          \ 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31\
+          \ 33303533 30313934\n  3834375A 170D3338 30353330 31393438 34375A30 32310E30\
+          \ 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317 43697363 6F204C69\
+          \ 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101\
+          \ 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6\
+          \ 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A\
+          \ 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3\
+          \ 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7\
+          \ 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3\
+          \ C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F\
+          \ 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4\
+          \ 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B\
+          \ DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F\
+          \ 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D\
+          \ 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648\
+          \ 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0\
+          \ 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB\
+          \ 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646\
+          \ 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC\
+          \ 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86\
+          \ C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229\
+          \ C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A\
+          \ B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE\
+          \ 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi pid CSR1000V\
+          \ sn 9QFS915ETI8\ndiagnostic bootup level minimal\nmemory free low-watermark\
+          \ processor 71464\n!\n!\nspanning-tree extend system-id\n!\n!\nredundancy\n\
+          !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+          !\ninterface GigabitEthernet1\n no ip address\n shutdown\n negotiation auto\n\
+          \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet2\n vrf forwarding\
+          \ FDOOR-DMVPN\n ip address 35.123.67.3 255.255.255.0\n negotiation auto\n\
+          \ ipv6 address 1234:35:123:67::3/64\n no mop enabled\n no mop sysid\n!\n\
+          interface GigabitEthernet3\n ip address 10.100.0.1 255.255.255.0\n negotiation\
+          \ auto\n ipv6 address 3000:10:100::1/64\n no mop enabled\n no mop sysid\n\
+          !\ninterface GigabitEthernet4\n no ip address\n shutdown\n negotiation auto\n\
+          \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet5\n no ip address\n\
+          \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+          \ GigabitEthernet6\n ip address 10.100.10.25 255.255.255.0\n negotiation\
+          \ auto\n ipv6 address 3000:10:100:10::25/64\n no mop enabled\n no mop sysid\n\
+          !\ninterface GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n\
+          \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n\
+          \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\nip forward-protocol\
+          \ nd\nno ip http server\nip http secure-server\n!\nip route vrf FDOOR-DMVPN\
+          \ 0.0.0.0 0.0.0.0 35.123.67.15\n!\n!\nipv6 route vrf FDOOR-DMVPN ::/0 1234:35:123:67::15\n\
+          !\n!\n!\n!\n!\ncontrol-plane\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout\
+          \ 0 0\n stopbits 1\nline vty 0 4\n exec-timeout 0 0\n login\n transport\
+          \ input ssh\n!\ncall-home\n ! If contact email address in call-home is configured\
+          \ as sch-smart-licensing@cisco.com\n ! the email address configured in Cisco\
+          \ Smart License Portal will be used as contact email address to send SCH\
+          \ notifications.\n contact-email-addr sch-smart-licensing@cisco.com\n profile\
+          \ \"CiscoTAC-1\"\n  active\n  destination transport-method http\n!\n!\n\
+          !\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: H1
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -480
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname ISP
+          ipv6 uni
+
+          int g1
+          ip add 100.0.20.15 255.255.255.0
+          ipv6 add 1234:100:0:20::15/64
+          no sh
+
+          int g2
+          ip add 35.123.67.15 255.255.255.0
+          ipv6 add 1234:35:123:67::15/64
+          no sh
+
+          int g3
+          ip add 150.30.120.15 255.255.255.0
+          ipv6 add 1234:150:30:120::15/64
+          no sh
+
+          int g4
+          ip add 24.0.200.15 255.255.255.0
+          ipv6 add 1234:24:0:200::15/64
+          no sh
+
+          int g5
+          ip add 173.45.21.15 255.255.255.0
+          ipv6 add 1234:173:45:21::15/64
+          no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: ISP
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -160
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: "Building configuration...\n\nCurrent configuration : 7203 bytes\n\
+          !\n! Last configuration change at 10:58:20 UTC Mon Jan 12 2026\n!\nversion\
+          \ 17.3\nservice timestamps debug datetime msec\nservice timestamps log datetime\
+          \ msec\n! Call-home is enabled by Smart-Licensing.\nservice call-home\n\
+          platform qfp utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+          platform console serial\n!\nhostname BR2\n!\nboot-start-marker\nboot-end-marker\n\
+          !\n!\nvrf definition FDOOR-DMVPN\n !\n address-family ipv4\n exit-address-family\n\
+          \ !\n address-family ipv6\n exit-address-family\n!\nno logging console\n\
+          !\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nlogin on-success log\n\
+          ipv6 unicast-routing\n!\n!\n!\n!\n!\n!\n!\nsubscriber templating\n!\n!\n\
+          !\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n!\n!\n!\n!\n!\n!\n\
+          !\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n enrollment pkcs12\n\
+          \ revocation-check crl\n!\n!\ncrypto pki certificate chain SLA-TrustPoint\n\
+          \ certificate ca 01\n  30820321 30820209 A0030201 02020101 300D0609 2A864886\
+          \ F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363 6F312030 1E060355\
+          \ 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31\
+          \ 33303533 30313934\n  3834375A 170D3338 30353330 31393438 34375A30 32310E30\
+          \ 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317 43697363 6F204C69\
+          \ 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101\
+          \ 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6\
+          \ 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A\
+          \ 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3\
+          \ 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7\
+          \ 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3\
+          \ C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F\
+          \ 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4\
+          \ 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B\
+          \ DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F\
+          \ 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D\
+          \ 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648\
+          \ 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0\
+          \ 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB\
+          \ 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646\
+          \ 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC\
+          \ 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86\
+          \ C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229\
+          \ C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A\
+          \ B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE\
+          \ 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi pid CSR1000V\
+          \ sn 93O2Z7W5O36\ndiagnostic bootup level minimal\nmemory free low-watermark\
+          \ processor 71464\n!\n!\nspanning-tree extend system-id\n!\n!\nredundancy\n\
+          bfd-template single-hop DMVPN\n interval min-tx 1000 min-rx 2000 multiplier\
+          \ 5\n dampening 3 1500 3000 5\n echo\n!\n!\n!\n!\n!\ncrypto ikev2 keyring\
+          \ DMVPN\n peer ANY-IPv6\n  address ::/0\n  pre-shared-key PASS\n !\n peer\
+          \ ANY-IPv4\n  address 0.0.0.0 0.0.0.0\n  pre-shared-key PASS\n !\n!\n!\n\
+          crypto ikev2 profile DMVPN\n match fvrf FDOOR-DMVPN\n match identity remote\
+          \ any\n authentication remote pre-share\n authentication local pre-share\n\
+          \ keyring local DMVPN\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto ipsec\
+          \ transform-set DMVPN esp-aes 256 esp-sha512-hmac\n mode transport\n!\n\
+          crypto ipsec profile DMVPN\n set security-association lifetime kilobytes\
+          \ 2000000\n set transform-set DMVPN\n set pfs group24\n set ikev2-profile\
+          \ DMVPN\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface Tunnel100\n ip address\
+          \ 192.168.100.2 255.255.255.0\n ip nhrp authentication PASS\n ip nhrp network-id\
+          \ 100\n ip nhrp nhs 192.168.100.11 nbma 1234:35:123:67::3 multicast\n ip\
+          \ nhrp nhs 192.168.100.22 nbma 1234:100:0:20::20 multicast priority 10\n\
+          \ ip ospf network point-to-multipoint\n ip ospf bfd\n ip ospf 1 area 0\n\
+          \ ipv6 mtu 1400\n ipv6 tcp adjust-mss 1340\n bfd template DMVPN\n tunnel\
+          \ source GigabitEthernet4\n tunnel mode gre multipoint ipv6\n tunnel key\
+          \ 100\n tunnel path-mtu-discovery\n tunnel vrf FDOOR-DMVPN\n tunnel protection\
+          \ ipsec profile DMVPN shared\n!\ninterface Tunnel200\n no ip address\n no\
+          \ ip redirects\n ip mtu 1400\n ip tcp adjust-mss 1360\n ipv6 address 3000:192:168:200::2/64\n\
+          \ ipv6 nhrp authentication PASS\n ipv6 nhrp network-id 200\n ipv6 nhrp nhs\
+          \ 3000:192:168:200::11 nbma 35.123.67.3 multicast\n bfd template DMVPN\n\
+          \ tunnel source GigabitEthernet4\n tunnel mode gre multipoint\n tunnel key\
+          \ 200\n tunnel vrf FDOOR-DMVPN\n tunnel protection ipsec profile DMVPN shared\n\
+          !\ninterface Tunnel300\n no ip address\n no ip redirects\n ip mtu 1400\n\
+          \ ip tcp adjust-mss 1360\n ipv6 address 3000:192:168:300::2/64\n ipv6 nhrp\
+          \ authentication PASS\n ipv6 nhrp network-id 300\n ipv6 nhrp nhs 3000:192:168:300::22\
+          \ nbma 100.0.20.20 multicast\n bfd template DMVPN\n tunnel source GigabitEthernet4\n\
+          \ tunnel mode gre multipoint\n tunnel key 300\n tunnel vrf FDOOR-DMVPN\n\
+          \ tunnel protection ipsec profile DMVPN shared\n!\ninterface GigabitEthernet1\n\
+          \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop\
+          \ sysid\n!\ninterface GigabitEthernet2\n no ip address\n shutdown\n negotiation\
+          \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet3\n\
+          \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop\
+          \ sysid\n!\ninterface GigabitEthernet4\n vrf forwarding FDOOR-DMVPN\n ip\
+          \ address 24.0.200.12 255.255.255.0\n negotiation auto\n ipv6 address 1234:24:0:200::12/64\n\
+          \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet5\n no ip address\n\
+          \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+          \ GigabitEthernet6\n ip address 10.0.20.25 255.255.255.0\n negotiation auto\n\
+          \ ipv6 address 3000:10:0:20::25/64\n no mop enabled\n no mop sysid\n!\n\
+          interface GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n\
+          \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n\
+          \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n!\nrouter\
+          \ eigrp DMVPN\n !\n address-family ipv6 unicast autonomous-system 100\n\
+          \  !\n  af-interface default\n   shutdown\n  exit-af-interface\n  !\n  af-interface\
+          \ GigabitEthernet6\n   no shutdown\n  exit-af-interface\n  !\n  af-interface\
+          \ Tunnel300\n   no shutdown\n   bfd\n  exit-af-interface\n  !\n  af-interface\
+          \ Tunnel200\n   no shutdown\n   bfd\n  exit-af-interface\n  !\n  topology\
+          \ base\n  exit-af-topology\n exit-address-family\n!\nrouter ospf 1\n router-id\
+          \ 0.0.0.2\n network 10.0.20.25 0.0.0.0 area 2\n distribute-list prefix DMVPN-OSPF-SPOKE\
+          \ in\n!\nip forward-protocol nd\nno ip http server\nip http secure-server\n\
+          !\nip route vrf FDOOR-DMVPN 0.0.0.0 0.0.0.0 24.0.200.15\n!\n!\n!\nip prefix-list\
+          \ DMVPN-OSPF-SPOKE seq 5 permit 0.0.0.0/0\nipv6 route vrf FDOOR-DMVPN ::/0\
+          \ 1234:24:0:200::15\n!\n!\n!\n!\n!\ncontrol-plane\n!\n!\n!\n!\n!\n!\nline\
+          \ con 0\n exec-timeout 0 0\n stopbits 1\nline vty 0 4\n exec-timeout 0 0\n\
+          \ login\n transport input ssh\n!\ncall-home\n ! If contact email address\
+          \ in call-home is configured as sch-smart-licensing@cisco.com\n ! the email\
+          \ address configured in Cisco Smart License Portal will be used as contact\
+          \ email address to send SCH notifications.\n contact-email-addr sch-smart-licensing@cisco.com\n\
+          \ profile \"CiscoTAC-1\"\n  active\n  destination transport-method http\n\
+          !\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: BR2
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: 240
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: "Building configuration...\n\nCurrent configuration : 7211 bytes\n\
+          !\n! Last configuration change at 10:58:17 UTC Mon Jan 12 2026\n!\nversion\
+          \ 17.3\nservice timestamps debug datetime msec\nservice timestamps log datetime\
+          \ msec\n! Call-home is enabled by Smart-Licensing.\nservice call-home\n\
+          platform qfp utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+          platform console serial\n!\nhostname BR1\n!\nboot-start-marker\nboot-end-marker\n\
+          !\n!\nvrf definition FDOOR-DMVPN\n !\n address-family ipv4\n exit-address-family\n\
+          \ !\n address-family ipv6\n exit-address-family\n!\nno logging console\n\
+          !\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nlogin on-success log\n\
+          ipv6 unicast-routing\n!\n!\n!\n!\n!\n!\n!\nsubscriber templating\n!\n!\n\
+          !\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n!\n!\n!\n!\n!\n!\n\
+          !\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n enrollment pkcs12\n\
+          \ revocation-check crl\n!\n!\ncrypto pki certificate chain SLA-TrustPoint\n\
+          \ certificate ca 01\n  30820321 30820209 A0030201 02020101 300D0609 2A864886\
+          \ F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363 6F312030 1E060355\
+          \ 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31\
+          \ 33303533 30313934\n  3834375A 170D3338 30353330 31393438 34375A30 32310E30\
+          \ 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317 43697363 6F204C69\
+          \ 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101\
+          \ 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6\
+          \ 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A\
+          \ 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3\
+          \ 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7\
+          \ 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3\
+          \ C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F\
+          \ 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4\
+          \ 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B\
+          \ DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F\
+          \ 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D\
+          \ 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648\
+          \ 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0\
+          \ 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB\
+          \ 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646\
+          \ 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC\
+          \ 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86\
+          \ C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229\
+          \ C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A\
+          \ B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE\
+          \ 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi pid CSR1000V\
+          \ sn 9QFPQVN1XJS\ndiagnostic bootup level minimal\nmemory free low-watermark\
+          \ processor 71464\n!\n!\nspanning-tree extend system-id\n!\n!\nredundancy\n\
+          bfd-template single-hop DMVPN\n interval min-tx 1000 min-rx 2000 multiplier\
+          \ 5\n dampening 3 1500 3000 5\n echo\n!\n!\n!\n!\n!\ncrypto ikev2 keyring\
+          \ DMVPN\n peer ANY-IPv6\n  address ::/0\n  pre-shared-key PASS\n !\n peer\
+          \ ANY-IPv4\n  address 0.0.0.0 0.0.0.0\n  pre-shared-key PASS\n !\n!\n!\n\
+          crypto ikev2 profile DMVPN\n match fvrf FDOOR-DMVPN\n match identity remote\
+          \ any\n authentication remote pre-share\n authentication local pre-share\n\
+          \ keyring local DMVPN\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto ipsec\
+          \ transform-set DMVPN esp-aes 256 esp-sha512-hmac\n mode transport\n!\n\
+          crypto ipsec profile DMVPN\n set security-association lifetime kilobytes\
+          \ 2000000\n set transform-set DMVPN\n set pfs group24\n set ikev2-profile\
+          \ DMVPN\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface Tunnel100\n ip address\
+          \ 192.168.100.1 255.255.255.0\n ip nhrp authentication PASS\n ip nhrp network-id\
+          \ 100\n ip nhrp nhs 192.168.100.11 nbma 1234:35:123:67::3 multicast\n ip\
+          \ nhrp nhs 192.168.100.22 nbma 1234:100:0:20::20 multicast priority 10\n\
+          \ ip ospf network point-to-multipoint\n ip ospf bfd\n ip ospf 1 area 0\n\
+          \ ipv6 mtu 1400\n ipv6 tcp adjust-mss 1340\n bfd template DMVPN\n tunnel\
+          \ source GigabitEthernet3\n tunnel mode gre multipoint ipv6\n tunnel key\
+          \ 100\n tunnel path-mtu-discovery\n tunnel vrf FDOOR-DMVPN\n tunnel protection\
+          \ ipsec profile DMVPN shared\n!\ninterface Tunnel200\n no ip address\n no\
+          \ ip redirects\n ip mtu 1400\n ip tcp adjust-mss 1360\n ipv6 address 3000:192:168:200::1/64\n\
+          \ ipv6 nhrp authentication PASS\n ipv6 nhrp network-id 200\n ipv6 nhrp nhs\
+          \ 3000:192:168:200::11 nbma 35.123.67.3 multicast\n bfd template DMVPN\n\
+          \ tunnel source GigabitEthernet3\n tunnel mode gre multipoint\n tunnel key\
+          \ 200\n tunnel vrf FDOOR-DMVPN\n tunnel protection ipsec profile DMVPN shared\n\
+          !\ninterface Tunnel300\n no ip address\n no ip redirects\n ip mtu 1400\n\
+          \ ip tcp adjust-mss 1360\n ipv6 address 3000:192:168:300::1/64\n ipv6 nhrp\
+          \ authentication PASS\n ipv6 nhrp network-id 300\n ipv6 nhrp nhs 3000:192:168:300::22\
+          \ nbma 100.0.20.20 multicast\n bfd template DMVPN\n tunnel source GigabitEthernet3\n\
+          \ tunnel mode gre multipoint\n tunnel key 300\n tunnel vrf FDOOR-DMVPN\n\
+          \ tunnel protection ipsec profile DMVPN shared\n!\ninterface GigabitEthernet1\n\
+          \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop\
+          \ sysid\n!\ninterface GigabitEthernet2\n no ip address\n shutdown\n negotiation\
+          \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet3\n\
+          \ vrf forwarding FDOOR-DMVPN\n ip address 150.30.120.34 255.255.255.0\n\
+          \ negotiation auto\n ipv6 address 1234:150:30:120::34/64\n no mop enabled\n\
+          \ no mop sysid\n!\ninterface GigabitEthernet4\n no ip address\n shutdown\n\
+          \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet5\n\
+          \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop\
+          \ sysid\n!\ninterface GigabitEthernet6\n ip address 10.0.10.25 255.255.255.0\n\
+          \ negotiation auto\n ipv6 address 3000:10:0:10::25/64\n no mop enabled\n\
+          \ no mop sysid\n!\ninterface GigabitEthernet7\n no ip address\n shutdown\n\
+          \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n\
+          \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop\
+          \ sysid\n!\n!\nrouter eigrp DMVPN\n !\n address-family ipv6 unicast autonomous-system\
+          \ 100\n  !\n  af-interface default\n   shutdown\n  exit-af-interface\n \
+          \ !\n  af-interface GigabitEthernet6\n   no shutdown\n  exit-af-interface\n\
+          \  !\n  af-interface Tunnel300\n   no shutdown\n   bfd\n  exit-af-interface\n\
+          \  !\n  af-interface Tunnel200\n   no shutdown\n   bfd\n  exit-af-interface\n\
+          \  !\n  topology base\n  exit-af-topology\n exit-address-family\n!\nrouter\
+          \ ospf 1\n router-id 0.0.0.1\n network 10.0.10.25 0.0.0.0 area 1\n distribute-list\
+          \ prefix DMVPN-OSPF-SPOKE in\n!\nip forward-protocol nd\nno ip http server\n\
+          ip http secure-server\n!\nip route vrf FDOOR-DMVPN 0.0.0.0 0.0.0.0 150.30.120.15\n\
+          !\n!\n!\nip prefix-list DMVPN-OSPF-SPOKE seq 5 permit 0.0.0.0/0\nipv6 route\
+          \ vrf FDOOR-DMVPN ::/0 1234:150:30:120::15\n!\n!\n!\n!\n!\ncontrol-plane\n\
+          !\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\nline vty 0\
+          \ 4\n exec-timeout 0 0\n login\n transport input ssh\n!\ncall-home\n ! If\
+          \ contact email address in call-home is configured as sch-smart-licensing@cisco.com\n\
+          \ ! the email address configured in Cisco Smart License Portal will be used\
+          \ as contact email address to send SCH notifications.\n contact-email-addr\
+          \ sch-smart-licensing@cisco.com\n profile \"CiscoTAC-1\"\n  active\n  destination\
+          \ transport-method http\n!\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: BR1
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: 240
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: "Building configuration...\n\nCurrent configuration : 7207 bytes\n\
+          !\n! Last configuration change at 10:58:29 UTC Mon Jan 12 2026\n!\nversion\
+          \ 17.3\nservice timestamps debug datetime msec\nservice timestamps log datetime\
+          \ msec\n! Call-home is enabled by Smart-Licensing.\nservice call-home\n\
+          platform qfp utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+          platform console serial\n!\nhostname BR3\n!\nboot-start-marker\nboot-end-marker\n\
+          !\n!\nvrf definition FDOOR-DMVPN\n !\n address-family ipv4\n exit-address-family\n\
+          \ !\n address-family ipv6\n exit-address-family\n!\nno logging console\n\
+          !\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nlogin on-success log\n\
+          ipv6 unicast-routing\n!\n!\n!\n!\n!\n!\n!\nsubscriber templating\n!\n!\n\
+          !\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n!\n!\n!\n!\n!\n!\n\
+          !\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n enrollment pkcs12\n\
+          \ revocation-check crl\n!\n!\ncrypto pki certificate chain SLA-TrustPoint\n\
+          \ certificate ca 01\n  30820321 30820209 A0030201 02020101 300D0609 2A864886\
+          \ F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363 6F312030 1E060355\
+          \ 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31\
+          \ 33303533 30313934\n  3834375A 170D3338 30353330 31393438 34375A30 32310E30\
+          \ 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317 43697363 6F204C69\
+          \ 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101\
+          \ 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6\
+          \ 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A\
+          \ 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3\
+          \ 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7\
+          \ 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3\
+          \ C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F\
+          \ 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4\
+          \ 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B\
+          \ DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F\
+          \ 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D\
+          \ 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648\
+          \ 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0\
+          \ 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB\
+          \ 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646\
+          \ 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC\
+          \ 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86\
+          \ C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229\
+          \ C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A\
+          \ B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE\
+          \ 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi pid CSR1000V\
+          \ sn 92MY9LB5CA7\ndiagnostic bootup level minimal\nmemory free low-watermark\
+          \ processor 71464\n!\n!\nspanning-tree extend system-id\n!\n!\nredundancy\n\
+          bfd-template single-hop DMVPN\n interval min-tx 1000 min-rx 2000 multiplier\
+          \ 5\n dampening 3 1500 3000 5\n echo\n!\n!\n!\n!\n!\ncrypto ikev2 keyring\
+          \ DMVPN\n peer ANY-IPv6\n  address ::/0\n  pre-shared-key PASS\n !\n peer\
+          \ ANY-IPv4\n  address 0.0.0.0 0.0.0.0\n  pre-shared-key PASS\n !\n!\n!\n\
+          crypto ikev2 profile DMVPN\n match fvrf FDOOR-DMVPN\n match identity remote\
+          \ any\n authentication remote pre-share\n authentication local pre-share\n\
+          \ keyring local DMVPN\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto ipsec\
+          \ transform-set DMVPN esp-aes 256 esp-sha512-hmac\n mode transport\n!\n\
+          crypto ipsec profile DMVPN\n set security-association lifetime kilobytes\
+          \ 2000000\n set transform-set DMVPN\n set pfs group24\n set ikev2-profile\
+          \ DMVPN\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface Tunnel100\n ip address\
+          \ 192.168.100.3 255.255.255.0\n ip nhrp authentication PASS\n ip nhrp network-id\
+          \ 100\n ip nhrp nhs 192.168.100.11 nbma 1234:35:123:67::3 multicast\n ip\
+          \ nhrp nhs 192.168.100.22 nbma 1234:100:0:20::20 multicast priority 10\n\
+          \ ip ospf network point-to-multipoint\n ip ospf bfd\n ip ospf 1 area 0\n\
+          \ ipv6 mtu 1400\n ipv6 tcp adjust-mss 1340\n bfd template DMVPN\n tunnel\
+          \ source GigabitEthernet5\n tunnel mode gre multipoint ipv6\n tunnel key\
+          \ 100\n tunnel path-mtu-discovery\n tunnel vrf FDOOR-DMVPN\n tunnel protection\
+          \ ipsec profile DMVPN shared\n!\ninterface Tunnel200\n no ip address\n no\
+          \ ip redirects\n ip mtu 1400\n ip tcp adjust-mss 1360\n ipv6 address 3000:192:168:200::3/64\n\
+          \ ipv6 nhrp authentication PASS\n ipv6 nhrp network-id 200\n ipv6 nhrp nhs\
+          \ 3000:192:168:200::11 nbma 35.123.67.3 multicast\n bfd template DMVPN\n\
+          \ tunnel source GigabitEthernet5\n tunnel mode gre multipoint\n tunnel key\
+          \ 200\n tunnel vrf FDOOR-DMVPN\n tunnel protection ipsec profile DMVPN shared\n\
+          !\ninterface Tunnel300\n no ip address\n no ip redirects\n ip mtu 1400\n\
+          \ ip tcp adjust-mss 1360\n ipv6 address 3000:192:168:300::3/64\n ipv6 nhrp\
+          \ authentication PASS\n ipv6 nhrp network-id 300\n ipv6 nhrp nhs 3000:192:168:300::22\
+          \ nbma 100.0.20.20 multicast\n bfd template DMVPN\n tunnel source GigabitEthernet5\n\
+          \ tunnel mode gre multipoint\n tunnel key 300\n tunnel vrf FDOOR-DMVPN\n\
+          \ tunnel protection ipsec profile DMVPN shared\n!\ninterface GigabitEthernet1\n\
+          \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop\
+          \ sysid\n!\ninterface GigabitEthernet2\n no ip address\n shutdown\n negotiation\
+          \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet3\n\
+          \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop\
+          \ sysid\n!\ninterface GigabitEthernet4\n no ip address\n shutdown\n negotiation\
+          \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet5\n\
+          \ vrf forwarding FDOOR-DMVPN\n ip address 173.45.21.32 255.255.255.0\n negotiation\
+          \ auto\n ipv6 address 1234:173:45:21::32/64\n no mop enabled\n no mop sysid\n\
+          !\ninterface GigabitEthernet6\n ip address 10.0.30.25 255.255.255.0\n negotiation\
+          \ auto\n ipv6 address 3000:10:0:30::25/64\n no mop enabled\n no mop sysid\n\
+          !\ninterface GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n\
+          \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n\
+          \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n!\nrouter\
+          \ eigrp DMVPN\n !\n address-family ipv6 unicast autonomous-system 100\n\
+          \  !\n  af-interface default\n   shutdown\n  exit-af-interface\n  !\n  af-interface\
+          \ GigabitEthernet6\n   no shutdown\n  exit-af-interface\n  !\n  af-interface\
+          \ Tunnel300\n   no shutdown\n   bfd\n  exit-af-interface\n  !\n  af-interface\
+          \ Tunnel200\n   no shutdown\n   bfd\n  exit-af-interface\n  !\n  topology\
+          \ base\n  exit-af-topology\n exit-address-family\n!\nrouter ospf 1\n router-id\
+          \ 0.0.0.3\n network 10.0.30.25 0.0.0.0 area 3\n distribute-list prefix DMVPN-OSPF-SPOKE\
+          \ in\n!\nip forward-protocol nd\nno ip http server\nip http secure-server\n\
+          !\nip route vrf FDOOR-DMVPN 0.0.0.0 0.0.0.0 173.45.21.15\n!\n!\n!\nip prefix-list\
+          \ DMVPN-OSPF-SPOKE seq 5 permit 0.0.0.0/0\nipv6 route vrf FDOOR-DMVPN ::/0\
+          \ 1234:173:45:21::15\n!\n!\n!\n!\n!\ncontrol-plane\n!\n!\n!\n!\n!\n!\nline\
+          \ con 0\n exec-timeout 0 0\n stopbits 1\nline vty 0 4\n exec-timeout 0 0\n\
+          \ login\n transport input ssh\n!\ncall-home\n ! If contact email address\
+          \ in call-home is configured as sch-smart-licensing@cisco.com\n ! the email\
+          \ address configured in Cisco Smart License Portal will be used as contact\
+          \ email address to send SCH notifications.\n contact-email-addr sch-smart-licensing@cisco.com\n\
+          \ profile \"CiscoTAC-1\"\n  active\n  destination transport-method http\n\
+          !\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: BR3
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: 240
+    y: 360
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |
+          hostname SW
+
+          int e0/0
+           sw acc vl 11
+
+          int e0/1
+           sw acc vl 22
+
+          int e0/2
+           sw acc vl 1
+
+          int e0/3
+           sw acc vl 2
+
+          int e1/0
+           sw acc vl 3
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: true
+    id: n6
+    image_definition: null
+    label: SW
+    node_definition: ioll2-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: -160
+    y: 160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: Ethernet1/0
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: Ethernet1/1
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: Ethernet1/2
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: Ethernet1/3
+        mac_address: null
+        type: physical
+        slot: 7
+links:
+  - id: l0
+    n1: n0
+    n2: n2
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: csr1000v-0-GigabitEthernet1<->csr1000v-0_1-GigabitEthernet1
+  - id: l1
+    n1: n1
+    n2: n2
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: csr1000v-0_0-GigabitEthernet2<->csr1000v-0_1-GigabitEthernet2
+  - id: l2
+    n1: n2
+    n2: n4
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: csr1000v-0_1-GigabitEthernet3<->csr1000v-0_3-GigabitEthernet3
+  - id: l3
+    n1: n2
+    n2: n3
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: csr1000v-0_1-GigabitEthernet4<->csr1000v-0_2-GigabitEthernet4
+  - id: l4
+    n1: n2
+    n2: n5
+    i1: i5
+    i2: i5
+    conditioning: {}
+    label: csr1000v-0_1-GigabitEthernet5<->csr1000v-0_4-GigabitEthernet5
+  - id: l5
+    n1: n1
+    n2: n6
+    i1: i6
+    i2: i1
+    conditioning: {}
+    label: H1-GigabitEthernet6<->SW-Ethernet0/0
+  - id: l6
+    n1: n0
+    n2: n6
+    i1: i6
+    i2: i2
+    conditioning: {}
+    label: H2-GigabitEthernet6<->SW-Ethernet0/1
+  - id: l7
+    n1: n4
+    n2: n6
+    i1: i6
+    i2: i3
+    conditioning: {}
+    label: BR1-GigabitEthernet6<->SW-Ethernet0/2
+  - id: l8
+    n1: n3
+    n2: n6
+    i1: i6
+    i2: i4
+    conditioning: {}
+    label: BR2-GigabitEthernet6<->SW-Ethernet0/3
+  - id: l9
+    n1: n5
+    n2: n6
+    i1: i6
+    i2: i5
+    conditioning: {}
+    label: BR3-GigabitEthernet6<->SW-Ethernet1/0
+  - id: l10
+    n1: n1
+    n2: n0
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: H1-GigabitEthernet3<->H2-GigabitEthernet3
+lab:
+  description: |-
+    IPv4overIPv6 - Single Cloud
+    IPv6overIPv4 - Dual Cloud
+  notes: ''
+  title: DMVPN 5 solution
+  version: 0.3.0
