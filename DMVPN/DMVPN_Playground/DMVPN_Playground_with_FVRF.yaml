@@ -1,0 +1,718 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      100.0.20.20
+      1234:100:0:20::20
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -400.0
+    y1: 200.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      173.45.21.32
+      1234:173:45:21::32
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 40.0
+    y1: 360.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      150.30.120.34
+      1234:150:30:120::34
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 40.0
+    y1: 40.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      24.0.200.12
+      1234:24:0:200::12
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 40.0
+    y1: 200.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      35.123.67.3
+      1234:35:123:67::3
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -400.0
+    y1: 40.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      G6:
+      10.0.20.25/24
+      3000:10:0:20::25/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 280.0
+    y1: 160.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      G6:
+      10.0.10.25/24
+      3000:10:0:10::25/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 280.0
+    y1: 0.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      G6:
+      10.0.30.25/24
+      3000:10:0:30::25/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 280.0
+    y1: 320.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      G6:
+      10.100.20.25/24
+      3000:10:100:20::25/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -680.0
+    y1: 160.0
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      G6:
+      10.100.10.25/24
+      3000:10:100:10::25/64
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -680.0
+    y1: 0.0
+    z_index: 1
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname H2
+          ipv6 uni
+
+          vrf definition FDOOR-DMVPN
+           add ipv4
+           add ipv6
+
+          int g1
+          vrf forwarding FDOOR-DMVPN
+          ip add 100.0.20.20 255.255.255.0
+          ipv6 add 1234:100:0:20::20/64
+          no sh
+
+          int g6
+          ip add 10.100.20.25 255.255.255.0
+          ipv6 add 3000:10:100:20::25/64
+          no sh
+
+          ip route vrf FDOOR-DMVPN 0.0.0.0 0.0.0.0 100.0.20.15
+          ipv6 route vrf FDOOR-DMVPN ::/0 1234:100:0:20::15
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: H2
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -480
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname H1
+          ipv6 uni
+
+          vrf definition FDOOR-DMVPN
+           add ipv4
+           add ipv6
+
+          int g2
+          vrf forwarding FDOOR-DMVPN
+          ip add 35.123.67.3 255.255.255.0
+          ipv6 add 1234:35:123:67::3/64
+          no sh
+
+          int g6
+          ip add 10.100.10.25 255.255.255.0
+          ipv6 add 3000:10:100:10::25/64
+          no sh
+
+          ip route vrf FDOOR-DMVPN 0.0.0.0 0.0.0.0 35.123.67.15
+          ipv6 route vrf FDOOR-DMVPN ::/0 1234:35:123:67::15
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: H1
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -480
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname ISP
+          ipv6 uni
+
+          int g1
+          ip add 100.0.20.15 255.255.255.0
+          ipv6 add 1234:100:0:20::15/64
+          no sh
+
+          int g2
+          ip add 35.123.67.15 255.255.255.0
+          ipv6 add 1234:35:123:67::15/64
+          no sh
+
+          int g3
+          ip add 150.30.120.15 255.255.255.0
+          ipv6 add 1234:150:30:120::15/64
+          no sh
+
+          int g4
+          ip add 24.0.200.15 255.255.255.0
+          ipv6 add 1234:24:0:200::15/64
+          no sh
+
+          int g5
+          ip add 173.45.21.15 255.255.255.0
+          ipv6 add 1234:173:45:21::15/64
+          no sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: ISP
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: -160
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname BR2
+          ipv6 uni
+
+          vrf definition FDOOR-DMVPN
+           add ipv4
+           add ipv6
+
+          int g4
+          vrf forwarding FDOOR-DMVPN
+          ip add 24.0.200.12 255.255.255.0
+          ipv6 add 1234:24:0:200::12/64
+          no sh
+
+          int g6
+          ip add 10.0.20.25 255.255.255.0
+          ipv6 add 3000:10:0:20::25/64
+          no sh
+
+          ip route vrf FDOOR-DMVPN 0.0.0.0 0.0.0.0 24.0.200.15
+          ipv6 route vrf FDOOR-DMVPN ::/0 1234:24:0:200::15
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: BR2
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: 240
+    y: 200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname BR1
+          ipv6 uni
+
+          vrf definition FDOOR-DMVPN
+           add ipv4
+           add ipv6
+
+          int g3
+          vrf forwarding FDOOR-DMVPN
+          ip add 150.30.120.34 255.255.255.0
+          ipv6 add 1234:150:30:120::34/64
+          no sh
+
+          int g6
+          ip add 10.0.10.25 255.255.255.0
+          ipv6 add 3000:10:0:10::25/64
+          no sh
+
+          ip route vrf FDOOR-DMVPN 0.0.0.0 0.0.0.0 150.30.120.15
+          ipv6 route vrf FDOOR-DMVPN ::/0 1234:150:30:120::15
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: BR1
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: 240
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: iosxe_config.txt
+        content: |-
+          hostname BR3
+          ipv6 uni
+
+          vrf definition FDOOR-DMVPN
+           add ipv4
+           add ipv6
+
+          int g5
+          vrf forwarding FDOOR-DMVPN
+          ip add 173.45.21.32 255.255.255.0
+          ipv6 add 1234:173:45:21::32/64
+          no sh
+
+          int g6
+          ip add 10.0.30.25 255.255.255.0
+          ipv6 add 3000:10:0:30::25/64
+          no sh
+
+          ip route vrf FDOOR-DMVPN 0.0.0.0 0.0.0.0 173.45.21.15
+          ipv6 route vrf FDOOR-DMVPN ::/0 1234:173:45:21::15
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: BR3
+    node_definition: csr1000v
+    parameters: {}
+    ram: null
+    tags: []
+    x: 240
+    y: 360
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet2
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet3
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet4
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet5
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet6
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet7
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet8
+        mac_address: null
+        type: physical
+        slot: 7
+links:
+  - id: l0
+    n1: n0
+    n2: n2
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: H2-GigabitEthernet1<->ISP-GigabitEthernet1
+  - id: l1
+    n1: n1
+    n2: n2
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: H1-GigabitEthernet2<->ISP-GigabitEthernet2
+  - id: l2
+    n1: n2
+    n2: n4
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: ISP-GigabitEthernet3<->BR1-GigabitEthernet3
+  - id: l3
+    n1: n2
+    n2: n3
+    i1: i4
+    i2: i4
+    conditioning: {}
+    label: ISP-GigabitEthernet4<->BR2-GigabitEthernet4
+  - id: l4
+    n1: n2
+    n2: n5
+    i1: i5
+    i2: i5
+    conditioning: {}
+    label: ISP-GigabitEthernet5<->BR3-GigabitEthernet5
+lab:
+  description: ''
+  notes: ''
+  title: DMVPN Playground with FVRF
+  version: 0.3.0
