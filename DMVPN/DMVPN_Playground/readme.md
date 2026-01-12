@@ -6,8 +6,8 @@ The underlay routing is **fully operational**, and **Front-Door VRF (FVRF)** is 
 
 ## Topology Summary
 - **ISP router** providing IPv4 and IPv6 transport
-- **One hub router (BR1)**
-- **Two spoke routers (BR2, BR3)**
+- **2 hub router (H1, H2)**
+- **3 spoke routers (BR1, BR2, BR3)**
 - All WAN-facing links are placed in a **Front-Door VRF** named FDOOR-DMVPN
 - The ISP acts purely as an underlay transport for DMVPN
 
