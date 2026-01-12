@@ -13,7 +13,7 @@ The lab **DMVPN_05.yaml** is pre-configured with:
 ## 🧪 Environment
 
 - **Platform:** Cisco CML
-- **Router Type:** ISR1000v
+- **Router Type:** CSR1000v
 
 ## 🎯 Task
 
