@@ -8,7 +8,7 @@ The lab **DMVPN_05.yaml** is pre-configured with:
 
 - IPv4 and IPv6 addressing,
 - Underlay routing
-- FVRF on H and RB routers 
+- FVRF on H and BR routers 
 
 ## 🧪 Environment
 
